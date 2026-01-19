@@ -72,25 +72,100 @@
       </div>
     </section>
 
-    <aside class="technology">
-      <div class="tech-card">
-        <h2>TECHNOLOGY &amp; PRODUCTS</h2>
-        <p class="muted">Dealer for a wide range of insulation materials and accessories</p>
-        <ul class="tech-list">
-          <li class="tech-item"><strong>Nitrile rubber</strong><p>Sheets and tubes</p></li>
-          <li class="tech-item"><strong>XLPE foam</strong><p>Sheets and tubes</p></li>
-          <li class="tech-item"><strong>Fiber glasswool</strong><p>Thermal &amp; acoustic insulation</p></li>
-          <li class="tech-item"><strong>Rockwool &amp; Stonewool</strong><p>High-temperature insulation</p></li>
-          <li class="tech-item"><strong>Pre-insulated metal sheets</strong><p>For building envelope applications</p></li>
-          <li class="tech-item"><strong>Industrial fans &amp; ventilators</strong><p>Air movement solutions</p></li>
-          <li class="tech-item"><strong>Polycarbonate sheets</strong><p>Lightweight cladding</p></li>
-          <li class="tech-item"><strong>Ducting solutions</strong><p>Flexible, semi-flexible and rigid systems</p></li>
-          <li class="tech-item"><strong>PUF slabs &amp; pipe sections</strong><p>Pre-formed thermal supports</p></li>
-          <li class="tech-item"><strong>Ancillaries</strong><p>Adhesives, connectors and more</p></li>
+    <section class="tech-products-section">
+      <div class="tech-products-card">
+        <h2 class="tech-products-heading">TECHNOLOGY &amp; PRODUCTS</h2>
+        <ul class="tech-products-list">
+          <li><b>Nitrile rubber</b> — Sheets and tubes</li>
+          <li><b>XLPE foam</b> — Sheets and tubes</li>
+          <li><b>Fiber glasswool</b> — Thermal &amp; acoustic insulation</li>
+          <li><b>Rockwool &amp; Stonewool</b> — High-temperature insulation</li>
+          <li><b>Pre-insulated metal sheets</b> — Building envelope applications</li>
+          <li><b>Industrial fans &amp; ventilators</b> — Air movement solutions</li>
+          <li><b>Polycarbonate sheets</b> — Lightweight cladding</li>
+          <li><b>Ducting solutions</b> — Flexible, semi-flexible, rigid systems</li>
+          <li><b>PUF slabs &amp; pipe sections</b> — Pre-formed thermal supports</li>
+          <li><b>Ancillaries</b> — Adhesives, connectors, and more</li>
         </ul>
-        <p><strong>We also provide turnkey thermal &amp; acoustic insulation contracting services.</strong></p>
+        <div class="tech-products-note">We also provide turnkey thermal &amp; acoustic insulation contracting services.</div>
       </div>
-    </aside>
+    </section>
+    <style>
+      .tech-products-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem 0 2rem 0;
+      }
+      .tech-products-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        padding: 2.5rem 2.5rem 2rem 2.5rem;
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .tech-products-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.6s cubic-bezier(.4,1.4,.6,1), transform 0.6s cubic-bezier(.4,1.4,.6,1);
+      }
+      .tech-products-heading.pop {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .tech-products-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+      }
+      .tech-products-list li {
+        font-size: 1.08rem;
+        color: #444;
+        margin-bottom: 0.7rem;
+        padding-left: 0.2rem;
+      }
+      .tech-products-list b {
+        color: #0b5cff;
+        font-weight: 600;
+      }
+      .tech-products-note {
+        font-size: 1.08rem;
+        color: #222;
+        font-weight: 600;
+        margin-top: 1.2rem;
+      }
+      @media (max-width: 700px) {
+        .tech-products-card {
+          padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+        }
+        .tech-products-heading {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+    <script>
+      // Pop-up animation for heading on scroll
+      document.addEventListener('DOMContentLoaded', function() {
+        var heading = document.querySelector('.tech-products-heading');
+        if (!heading) return;
+        function onScroll() {
+          var rect = heading.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 80) {
+            heading.classList.add('pop');
+            window.removeEventListener('scroll', onScroll);
+          }
+        }
+        window.addEventListener('scroll', onScroll);
+        onScroll();
+      });
+    </script>
     </section>
 
     <section class="about container two-col">
@@ -115,10 +190,6 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 HIENIS.</p>
-      <p>Hi-Tech Energy Insulation<br>Address: 75, Abdulkalam Road, Nagalkeni, Chromepet, Chennai, 600044, India.<br>Contact: +91 94440 38255 | hitechenergyinsulations@gmail.com</p>
-    </div>
   <!-- Global Footer Include -->
   <div id="global-footer"></div>
   <script>

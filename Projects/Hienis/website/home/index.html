@@ -16,15 +16,15 @@
         <img src="../../Images/logo.png" alt="HIENIS logo" class="site-logo stylish-logo-img" />
       </a>
       <nav id="site-nav" class="site-nav stylish-nav">
+        <button id="nav-toggle" aria-label="Open menu" style="display:none;background:transparent;border:0;font-size:2.2rem;color:#fff;cursor:pointer;outline:none;position:absolute;right:18px;top:16px;z-index:1100;">
+          &#9776;
+        </button>
         <ul class="stylish-menu">
           <li><a href="../home/index.html" class="stylish-link">Home</a></li>
           <li><a href="../about/index.html" class="stylish-link">About</a></li>
           <li><a href="../products/index.html" class="stylish-link">Products</a></li>
           <li><a href="../contact/index.html" class="stylish-link">Contact</a></li>
         </ul>
-          <button id="nav-toggle" aria-label="Open menu" style="display:none;background:transparent;border:0;font-size:2.2rem;color:#fff;cursor:pointer;outline:none;position:absolute;right:18px;top:16px;z-index:1100;">
-            &#9776;
-          </button>
       </nav>
       <a class="header-contact stylish-contact" href="https://wa.me/919444038255" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" role="img" style="vertical-align:middle;width:28px;height:28px;">
@@ -79,16 +79,119 @@
       </div>
     </section>
 
-    <section class="intro container">
-    <section class="about-section">
-      <img src="../images/about-us.jpg" alt="About HIENIS" />
-      <div class="about-section-content">
-        <h2>About HIENIS</h2>
-        <p>HIENIS (Hi-Tech Energy Insulations) is a leading provider of advanced energy insulation and thermal protection solutions. We serve a wide range of industries including industrial, commercial, and residential sectors. Our commitment to quality, innovation, and customer satisfaction sets us apart in the insulation industry.</p>
-        <a href="../about/index.html" class="btn">Learn More About Us</a>
+
+    <section class="about-hero-section">
+      <div class="about-hero-grid">
+        <div class="about-hero-left">
+          <div class="about-hero-label">HIENIS INSULATIONS</div>
+          <h1 class="about-hero-title">If quality and service is your requirement, HIENIS is your provider</h1>
+          <div class="about-hero-underline"></div>
+        </div>
+        <div class="about-hero-right">
+          <div class="about-hero-desc">
+            <span class="about-hero-company">HIENIS ENGINEERING & INSULATION PRODUCTS</span>, specializes in industrial insulation and energy-saving solutions. We serve and cater to the needs of HVAC, Cleanrooms, Pharma, Food, Cold Storage, Commercial, and Industrial sectors.
+          </div>
+          <a href="../about/index.html" class="about-hero-link">LEARN ABOUT US &rarr;</a>
+        </div>
       </div>
     </section>
-    </section>
+    <style>
+      .about-hero-section {
+        background: #fff;
+        padding: 3.5rem 3vw 2.5rem 3vw;
+        margin-bottom: 2.5rem;
+      }
+      .about-hero-section {
+        background: #fff;
+        padding: 3.5rem 0 2.5rem 0;
+        margin-bottom: 2.5rem;
+      }
+      .about-hero-grid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 1400px;
+        margin: 0 auto;
+        gap: 2.5rem;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+      }
+      .about-hero-left {
+        flex: 1 1 420px;
+        min-width: 320px;
+        max-width: 600px;
+        margin-left: 1.5vw;
+      }
+      .about-hero-label {
+        font-size: 1.1rem;
+        color: #888;
+        letter-spacing: 0.15em;
+        margin-bottom: 1.2rem;
+        font-weight: 500;
+      }
+      .about-hero-title {
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 1.2rem;
+        line-height: 1.13;
+      }
+      .about-hero-underline {
+        width: 60px;
+        height: 4px;
+        background: #ffc144;
+        border-radius: 2px;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .about-hero-right {
+        flex: 1 1 480px;
+        min-width: 320px;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .about-hero-company {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #888;
+        letter-spacing: 0.04em;
+      }
+      .about-hero-desc {
+        font-size: 1.25rem;
+        color: #7a7a7a;
+        margin-bottom: 2.2rem;
+        line-height: 1.6;
+      }
+      .about-hero-link {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #222;
+        text-decoration: none;
+        border-bottom: 3px solid #eee;
+        padding-bottom: 2px;
+        transition: color 0.2s, border-color 0.2s;
+        width: fit-content;
+      }
+      .about-hero-link:hover {
+        color: #ffc144;
+        border-color: #ffc144;
+      }
+      @media (max-width: 900px) {
+        .about-hero-grid {
+          flex-direction: column;
+          gap: 2.5rem;
+        }
+        .about-hero-left, .about-hero-right {
+          max-width: 100%;
+        }
+        .about-hero-title {
+          font-size: 2.1rem;
+        }
+      }
+    </style>
 
     <section class="products container">
       <h2 style="font-size:2rem;color:#0a7f2d;font-weight:800;margin-bottom:24px;">Our Products</h2>
