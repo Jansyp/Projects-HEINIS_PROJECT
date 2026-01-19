@@ -1,0 +1,353 @@
+/* Root stylesheet cleared — per-page styles live in each page folder. */
+/* If you need a shared global stylesheet, add it here. */
+
+:root{}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Condensed:wght@400;700&display=swap');
+
+:root {
+	--main-font: 'Montserrat Condensed', Arial, Helvetica, sans-serif;
+}
+:root{}
+
+/* Shared page container used by header/footer/main to keep consistent width */
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Modern Global Footer Styles */
+.site-footer {
+	background: #181818;
+	color: #f3f3f3;
+	font-family: var(--main-font);
+	margin-top: 3rem;
+	box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
+	position: relative;
+}
+.footer-top {
+	background: linear-gradient(90deg, #ffc144 0%, #ffe7b0 100%);
+	color: #222;
+	padding: 1.5rem 0;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+.footer-contact {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2.5rem;
+}
+.footer-main {
+	background: #181818;
+	padding: 2.5rem 0 1.5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+.footer-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	max-width: 1200px;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+.footer-brand {
+	flex: 1 1 320px;
+	min-width: 280px;
+	margin: 0 1.5rem;
+	text-align: center;
+}
+.footer-logo {
+	height: 70px;
+	margin-bottom: 1.2rem;
+	filter: drop-shadow(0 2px 8px rgba(0,0,0,0.10));
+}
+.footer-brand p {
+	font-size: 1.1rem;
+	color: #b2f2e6;
+	margin-bottom: 1.2rem;
+}
+.footer-social {
+	margin-top: 0.5rem;
+}
+.footer-social a {
+	display: inline-block;
+	margin: 0 0.4rem;
+	transition: transform 0.2s, box-shadow 0.2s;
+	border-radius: 50%;
+}
+.footer-social a:hover {
+	transform: translateY(-3px) scale(1.1);
+	box-shadow: 0 2px 8px #ffc14444;
+	background: #fffbe6;
+}
+.footer-social img {
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+}
+.footer-bottom {
+	text-align: center;
+	color: #fff;
+	font-size: 1rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+	align-items: center;
+}
+.footer-link {
+	color: #ffc144;
+	text-decoration: none;
+	margin: 0 0.5rem;
+	font-weight: 500;
+	transition: color 0.2s;
+}
+.footer-link:hover {
+	color: #fffbe6;
+	text-decoration: underline;
+}
+.footer-backtotop {
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	background: #ffc144;
+	color: #222;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	text-decoration: none;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+	z-index: 100;
+}
+.footer-backtotop:hover {
+	background: #222;
+	color: #ffc144;
+	box-shadow: 0 4px 16px #ffc14488;
+}
+@media (max-width: 700px) {
+	.footer-content, .footer-brand {
+		flex-direction: column;
+		margin: 0;
+		min-width: 0;
+	}
+	.footer-main {
+		padding: 1.5rem 0 1rem 0;
+	}
+	.footer-logo {
+		height: 50px;
+	}
+	.footer-backtotop {
+		right: 16px;
+		bottom: 16px;
+		width: 44px;
+		height: 44px;
+		font-size: 1.3rem;
+	}
+	.footer-top {
+		font-size: 1.1rem;
+		padding: 1rem 0;
+	}
+}
+/* Logo image sizing */
+.site-logo{
+	height:40px;
+	width:auto;
+	vertical-align:middle;
+}
+.site-header .logo{display:inline-block}
+
+/* Hero background and CTA styles */
+.hero{
+	background-image: url("../../Images/background.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	padding: 80px 0;
+	position: relative;
+}
+.hero::before{
+	content: '';
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+	background: rgba(0,0,0,0.35);
+}
+.hero .container{position:relative; z-index:2}
+.hero h1{margin:0 0 10px; font-size:2.25rem}
+.hero p{margin:0 0 16px}
+.btn{display:inline-block; padding:10px 18px; background:#007acc; color:#fff; text-decoration:none; border-radius:4px}
+.btn.secondary{background:transparent; border:1px solid #fff}
+
+/* Slider styles */
+
+/* Slider styles for full-width, fade, overlay */
+.hero-slider {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	min-height: 400px;
+}
+.hero-slide {
+	position: absolute;
+	top: 0; left: 0; width: 100%; height: 100%;
+	opacity: 0;
+	z-index: 1;
+	transition: opacity 1s cubic-bezier(.4,0,.2,1);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hero-slide.active {
+	opacity: 1;
+	z-index: 2;
+	pointer-events: auto;
+}
+.hero-overlay {
+	position: absolute;
+	top: 0; left: 0; width: 100%; height: 100%;
+	background: rgba(0,0,0,0.35);
+	z-index: 2;
+}
+.hero-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	color: #fff;
+	text-align: center;
+	max-width: 900px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 350px;
+}
+.hero-controls {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transform: translateY(-50%);
+	z-index: 10;
+	pointer-events: none;
+}
+.hero-controls button {
+	pointer-events: auto;
+}
+.hero-controls button {
+	background: rgba(0,0,0,0.4);
+	color: #fff;
+	border: 0;
+	padding: 10px 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1.5rem;
+	transition: background 0.2s;
+	margin: 0;
+}
+.hero-controls button:hover {
+	background: rgba(0,0,0,0.7);
+}
+
+/* Fixed header so navigation stays visible on scroll */
+.site-header{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	background:#fff;
+	z-index:9999;
+	box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+/* Ensure header container is centered and allows absolute-centering of nav */
+	.site-header .container{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:10px 18px;max-width:1100px;margin:0 auto}
+	.site-header .logo{justify-self:start}
+	.site-header #site-nav{justify-self:center}
+	.site-header .header-contact{justify-self:end}
+	#site-nav ul{display:flex;gap:18px;margin:0;padding:0;list-style:none}
+	#site-nav a{color:#222;text-decoration:none;padding:8px 12px;display:inline-block}
+#nav-toggle{display:none;background:transparent;border:0;font-size:20px}
+@media(max-width:800px){
+	#site-nav{display:none}
+	#nav-toggle{display:inline-block}
+}
+
+/* Ensure page content is not hidden behind fixed header */
+body{padding-top:72px}
+
+/* Mobile nav visible state (support both .show and legacy .open class) */
+.site-nav.show,
+.site-nav.open{
+	display:block;
+	position:absolute;
+	left:0;
+	right:0;
+	top:72px;
+	background:#fff;
+	padding:12px;
+	border-top:1px solid #eee;
+	box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.site-nav.show ul,
+.site-nav.open ul{
+	flex-direction:column;
+}
+
+/* Active nav link */
+#site-nav a.active{background:#007acc;color:#fff;border-radius:4px}
+
+/* Enforce consistent header appearance */
+.site-header{font-family:Arial,Helvetica,sans-serif}
+.site-header .logo{display:flex;align-items:center}
+.site-header .site-logo{height:44px;max-height:48px}
+#site-nav ul{align-items:center}
+#site-nav a{font-size:15px;padding:8px 10px;color:#333}
+#site-nav a:hover{background:rgba(0,0,0,0.04);border-radius:4px}
+.site-header .container{padding:10px 18px}
+
+/* Center the main nav between logo (left) and any right-side content */
+		/* Remove absolute centering and use grid; responsive fallback below */
+		@media(max-width:900px){
+			.site-header .container{grid-template-columns:auto 1fr;align-items:center}
+			.site-header #site-nav{justify-self:end}
+			.site-header .header-contact{display:none}
+		}
+
+/* Ensure logo stays on the left and above nav on small screens */
+.site-header .logo{z-index:3}
+
+@media(max-width:900px){
+	/* On smaller viewports, make nav flow after logo (not absolute) */
+	#site-nav{position:static;transform:none;margin-left:auto}
+	.site-header .container{justify-content:space-between}
+}
+
+/* Right-side contact block in header */
+.header-contact{display:flex;align-items:center;gap:10px;margin-left:auto;text-decoration:none;color:inherit}
+.header-contact svg{width:30px;height:30px;display:block;flex-shrink:0}
+.header-contact .contact-phone{font-size:16px;font-weight:700;color:#111}
+.header-contact .contact-note{font-size:12px;color:#666;display:block}
+.header-contact:hover{opacity:0.95}
+
+@media(max-width:900px){
+	.header-contact{display:none}
+}

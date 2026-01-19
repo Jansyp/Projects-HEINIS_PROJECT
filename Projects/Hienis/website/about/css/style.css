@@ -1,0 +1,282 @@
+/* Local styles for About (copied from root) */
+:root{
+  --primary:#0b5cff;
+  --accent:#f2c94c;
+  --bg:#f7f7f7;
+  --text:#222;
+  --muted:#666;
+  --card-bg:#ffffff;
+  --glass: rgba(255,255,255,0.06);
+  --shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+/* Scheme utility classes - apply to a section or container to scope colors locally */
+.scheme-default{ /* uses root variables */ }
+.scheme-olive{
+  --primary:#0e8a3f;
+  --accent:#f0b429;
+  --bg:#f3fbf6;
+  --text:#083318;
+  --muted:#35684a;
+  --card-bg:#ffffff;
+}
+.scheme-teal{
+  --primary:#0b8a8a;
+  --accent:#ffd166;
+  --bg:#f1fbfb;
+  --text:#073737;
+  --muted:#2f6b6b;
+  --card-bg:#ffffff;
+}
+.scheme-warm{
+  --primary:#d9534f;
+  --accent:#ffb86b;
+  --bg:#fff8f2;
+  --text:#4a2b2b;
+  --muted:#7a4f4a;
+  --card-bg:#ffffff;
+}
+
+/* Usage: add a scheme class to a section container, e.g. <section class="state-art scheme-teal"> */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family: system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased}
+
+/* Vibrant About page color scheme */
+:root{
+  --primary:#7b2ff2;
+  --accent:#f357a8;
+  --bg:#f9f6ff;
+  --text:#2d1a4a;
+  --muted:#7a5fa4;
+  --card-bg:#fff;
+  --glass: rgba(255,255,255,0.12);
+  --shadow: 0 8px 32px rgba(123,47,242,0.08);
+  --about-gradient: linear-gradient(120deg, #7b2ff2 0%, #f357a8 100%);
+  --about-gradient-dark: linear-gradient(120deg, #4e167e 0%, #f357a8 100%);
+}
+
+/* Hero */
+.hero{background:linear-gradient(90deg, rgba(11,92,255,0.06), rgba(242,201,76,0.03));padding:3rem 0;text-align:center;position:relative}
+.hero p{margin-bottom:18px;line-height:1.6;max-width:820px;margin-left:auto;margin-right:auto}
+.hero .btn{background:var(--accent);color:#111;font-weight:700;padding:10px 18px;border-radius:8px;margin-top:14px;border:0}
+.hero .btn:hover{filter:brightness(.98)}
+/* About Hero Section */
+.about-hero {
+  background: var(--about-gradient);
+  color: #fff;
+  padding: 3.5rem 0 2.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.about-hero::before {
+  content: '';
+  position: absolute;
+  left: -80px; right: -80px; top: -80px; bottom: -80px;
+  background: radial-gradient(circle at 60% 40%, #fff3 0%, transparent 70%);
+  z-index: 0;
+}
+.about-hero .container {
+  position: relative;
+  z-index: 1;
+}
+.about-hero p {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.18rem;
+  color: #fbefff;
+}
+.about-hero .link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 2.2rem;
+}
+.about-hero .link-card {
+  background: var(--card-bg);
+  color: var(--primary);
+  font-weight: 600;
+  padding: 1.1rem 2.2rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px #7b2ff22a;
+  text-decoration: none;
+  font-size: 1.08rem;
+  transition: transform 0.18s, box-shadow 0.18s, color 0.18s;
+  border: 2px solid #fff2;
+}
+.about-hero .link-card:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 6px 24px #f357a84d;
+}
+/* About Content Section */
+.about-content {
+  background: var(--about-gradient-dark);
+  color: #fff;
+  padding: 2.5rem 0 2rem 0;
+  text-align: center;
+}
+.about-content .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.about-content p {
+  font-size: 1.13rem;
+  margin-bottom: 1.2rem;
+  color: #fbefff;
+}
+
+/* Two-column blocks for company info */
+.two-col {
+  display: flex;
+  gap: 2.2rem;
+  padding: 2.5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.two-col .col {
+  flex: 1 1 320px;
+  background: var(--card-bg);
+  padding: 1.5rem 1.2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #7b2ff21a;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+  border: 1.5px solid #f357a84d;
+  transition: box-shadow 0.18s, border 0.18s;
+}
+.two-col .col:hover {
+  box-shadow: 0 8px 32px #f357a84d;
+  border: 1.5px solid var(--accent);
+}
+/* Commitment Section */
+.commitment {
+  background: linear-gradient(120deg, #f357a8 0%, #7b2ff2 100%);
+  color: #fff;
+  padding: 3rem 0 2.2rem 0;
+  margin-top: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #7b2ff21a;
+}
+.commitment h2 {
+  text-align: center;
+  font-size: 1.45rem;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px #7b2ff255;
+}
+/* Technology Card Section */
+.technology {
+  background: transparent;
+  margin: 2.5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.tech-card {
+  background: var(--glass);
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #7b2ff21a;
+  backdrop-filter: blur(8px);
+  max-width: 540px;
+  margin: 0 auto;
+}
+.tech-card h2 {
+  color: var(--primary);
+  font-size: 1.25rem;
+  margin-bottom: 0.7rem;
+}
+.tech-list {
+  display: grid;
+  gap: .7rem;
+  margin: 1.2rem 0;
+}
+.tech-item {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  background: #fff2;
+  color: var(--primary);
+  font-weight: 500;
+  transition: background 0.18s, color 0.18s;
+}
+.tech-item strong {
+  display: block;
+  color: var(--accent);
+  font-size: 1.08rem;
+}
+.tech-item p {
+  margin: 0;
+  color: #fff;
+  font-size: .98rem;
+}
+.tech-item:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.muted{color:var(--muted);font-style:italic;}
+
+@media (max-width:1000px){
+  .about-hero, .about-content, .commitment, .technology, .two-col {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .two-col {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .tech-card {
+    padding: 1.2rem 1rem;
+  }
+}
+
+/* State of the art section - modern aligned layout */
+.state-art{background-image:linear-gradient(rgba(0,0,0,0.28),rgba(0,0,0,0.28)), url("../../Images/background.jpg");background-size:cover;background-position:center;color:#fff;padding:4rem 1rem}
+.state-art .container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.state-art .state-content{padding:2rem;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));border-radius:10px}
+.state-art h1{margin:0;font-size:42px;letter-spacing:1.2px}
+.state-art p{color:rgba(255,255,255,0.92);line-height:1.6;margin-top:.75rem}
+
+/* Technology column */
+.technology{background:transparent}
+.tech-card{background:rgba(255,255,255,0.06);padding:1rem;border-radius:10px;box-shadow:var(--shadow);backdrop-filter:blur(6px)}
+.tech-list{display:grid;gap:.5rem}
+.tech-item{display:flex;align-items:flex-start;gap:.75rem;padding:.5rem;border-radius:8px;background:rgba(0,0,0,0.15)}
+.tech-item strong{display:block}
+.tech-item p{margin:0;color:rgba(255,255,255,0.85);font-size:.95rem}
+
+/* Two-column blocks elsewhere */
+.two-col{display:flex;gap:2rem;padding:2.5rem 0;flex-wrap:wrap}
+.two-col .col{flex:1 1 320px;background:var(--card-bg);padding:1.25rem;border-radius:12px;box-shadow:var(--shadow)}
+
+.commitment{background:linear-gradient(180deg,#1db64b,#0ea03b);color:#fff;padding:3rem 0;margin-top:1.5rem;border-radius:8px}
+.commitment h2{text-align:center;font-size:1.25rem;letter-spacing:1px}
+
+.intro{padding:2rem 0}
+.products .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:var(--card-bg);padding:1rem;border-radius:10px;border:1px solid rgba(0,0,0,0.04);box-shadow:var(--shadow)}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+
+.site-footer{background:var(--card-bg);border-top:1px solid rgba(0,0,0,0.04);padding:1rem;margin-top:2rem}
+.muted{color:var(--muted)}
+
+.contact-form label{display:block;margin-bottom:.75rem}
+.contact-form input,.contact-form textarea{width:100%;padding:.65rem;border:1px solid rgba(0,0,0,0.08);border-radius:8px}
+
+/* Small screens */
+@media (max-width:1000px){
+  .state-art .container{grid-template-columns:1fr;gap:1.25rem;padding:1rem}
+  .products .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  .products .grid{grid-template-columns:1fr}
+  .two-col{flex-direction:column}
+}

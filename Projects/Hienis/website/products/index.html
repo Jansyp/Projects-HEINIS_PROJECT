@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Industrial Fans — Product Detail</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .hero {background: linear-gradient(#155a2f, #2e8b57); color: #fff; padding: 48px 24px;}
+      .section-title{background:#e9f2ef;padding:10px 14px;border-radius:6px;display:inline-block;margin:18px 0}
+      .cards{display:flex;gap:18px;flex-wrap:wrap}
+      .card{flex:1 1 48%;background:#fff;border:1px solid #e1e1e1;padding:12px;border-radius:6px;text-align:center}
+      .card img{max-width:100%;height:220px;object-fit:contain;border-radius:4px;background:#f7f7f7;padding:10px}
+      ul.apps{columns:2;list-style:disc;margin:0 0 0 20px}
+      @media(max-width:700px){.cards{flex-direction:column}.card{flex-basis:100%}.ul.apps{columns:1}}
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="../home/index.html"><img src="../../Images/logo.png" alt="HIENIS logo" class="site-logo" /></a>
+        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="site-nav" class="site-nav">
+          <ul>
+            <li><a href="../home/index.html">Home</a></li>
+            <li><a href="../about/index.html">About</a></li>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="header-contact" href="https://wa.me/919444038255" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" role="img">
+            <path fill="#0a7f2d" d="M20.52 3.48A11.96 11.96 0 0012 0C5.373 0 .001 5.373.001 12c0 2.116.554 4.186 1.603 6.03L0 24l6.166-1.596A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.187-1.243-6.17-3.48-8.52zM12 21.5c-1.73 0-3.402-.433-4.89-1.25l-.35-.19-3.667.95.989-3.558-.23-.37A9.51 9.51 0 012.5 12c0-5.247 4.253-9.5 9.5-9.5S21.5 6.753 21.5 12 17.247 21.5 12 21.5z"/>
+            <path fill="#fff" d="M17.6 14.2c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.51-1.79-1.69-2.09-.18-.3-.02-.46.13-.61.13-.12.3-.32.45-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.49-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.36-.27.3-1.02.99-1.02 2.42 0 1.43 1.04 2.82 1.18 3.02.14.2 2.04 3.12 4.95 4.38 2.9 1.26 2.9.84 3.42.79.52-.05 1.69-.69 1.93-1.36.24-.67.24-1.24.17-1.36-.06-.12-.24-.18-.54-.33z"/>
+          </svg>
+          <span>
+            <span class="contact-note">Call us for any question</span>
+            <span class="contact-phone">+91 94440 38255</span>
+          </span>
+        </a>
+      </div>
+    </header>
+
+
+
+    <main class="container">
+      <h1 style="text-align:center;font-size:2.5rem;margin:2.2rem 0 1.5rem 0;color:#0b5cff;letter-spacing:1.5px;font-weight:800;">Our Products</h1>
+      <div class="product-list" style="margin: 32px auto; max-width: 600px;">
+        <ul style="font-size:1.2rem; color:#222; line-height:2;">
+          <li>NITRILE RUBBER - SHEETS AND TUBES</li>
+          <li>XLPE FOAM - SHEETS AND TUBES</li>
+          <li>FIBER GLASSWOOL</li>
+          <li>ROCKWOOL & STONEWOOL</li>
+          <li>ELEXIQ COOLQUARD - PRE-INSULATED METAL SHEETS</li>
+          <li>INDUSTRIAL FANS</li>
+          <li>POLY-CARBONATE SHEETS</li>
+          <li>FLEXIBLE DUCTS</li>
+          <li>SEMI FLEXIBLE METALLIC DUCT</li>
+          <li>REFLECTIVE AIR BUBBLE INSULATION</li>
+          <li>RIGID PUF SLAB | PIPE SECTION | SUPPORT</li>
+          <li>TURBO VENTILATORS</li>
+          <li>SPANDRAL INSULATION TRAY GI | ALUMINIUM</li>
+          <li>RUBBER ADHESIVE</li>
+          <li>ALL ANCILLARY PRODUCTS</li>
+          <li>DUCT CANVAS CONNECTORS</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Global Footer Include -->
+    <div id="global-footer"></div>
+    <script>
+      fetch('../footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('global-footer').innerHTML = html;
+        });
+    </script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
