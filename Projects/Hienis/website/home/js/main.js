@@ -1,9 +1,41 @@
 // Product slider auto-scroll and arrow navigation
 document.addEventListener('DOMContentLoaded', function() {
+  // Dynamically load productsData
   const track = document.getElementById('productSliderTrack');
   const prev = document.getElementById('productSliderPrev');
   const next = document.getElementById('productSliderNext');
   let autoScrollInterval;
+
+  // Helper to create a product card
+  function createProductCard(product) {
+    const card = document.createElement('article');
+    card.className = 'card product-card';
+    card.innerHTML = `
+      <img src="../products/images/${product.image}" alt="${product.title}" />
+      <h3>${product.title}</h3>
+      <p>${product.shortDescription}</p>
+      <a href="${product.pageUrl}" class="btn">Read More</a>
+    `;
+    return card;
+  }
+
+  // Render all products
+  function renderProducts() {
+    track.innerHTML = '';
+    productsData.forEach(product => {
+      track.appendChild(createProductCard(product));
+    });
+  }
+
+  // If productsData is not global, load it
+  if (typeof productsData === 'undefined') {
+    const script = document.createElement('script');
+    script.src = '../../js/productsData.js';
+    script.onload = renderProducts;
+    document.head.appendChild(script);
+  } else {
+    renderProducts();
+  }
 
   function scrollByCard(dir = 1) {
     const card = track.querySelector('.product-card');

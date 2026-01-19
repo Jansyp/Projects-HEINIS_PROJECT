@@ -8,26 +8,148 @@
   <title>Home — HIENIS — HI-Tech Energy Insulations</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Stylish Navbar Styles */
+      .stylish-navbar {
+        background: #111;
+        box-shadow: 0 2px 12px rgba(11,92,255,0.08);
+        padding: 0;
+      }
+      .stylish-navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .stylish-logo-img {
+        height: 54px;
+        width: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        background: #fff;
+        padding: 4px 8px;
+      }
+      .stylish-nav {
+        flex: 1;
+        margin-left: 48px;
+      }
+      .stylish-menu {
+        display: flex;
+        gap: 2.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+      .stylish-link {
+        color: #fff !important;
+        font-weight: 600;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        padding: 10px 18px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        text-decoration: none;
+        position: relative;
+      }
+      .stylish-link:hover, .stylish-link:focus {
+        background: rgba(255,255,255,0.18);
+        color: #ffe600;
+        box-shadow: 0 2px 8px rgba(11,92,255,0.10);
+      }
+      .stylish-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 3px;
+        background: #ffe600;
+        border-radius: 2px;
+        transition: width 0.3s;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+      .stylish-link:hover::after, .stylish-link:focus::after {
+        width: 80%;
+      }
+      .stylish-contact {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        color: #0a7f2d;
+        border-radius: 8px;
+        padding: 6px 16px 6px 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 2px 8px rgba(11,92,255,0.10);
+        margin-left: 2rem;
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s;
+      }
+      .stylish-contact:hover, .stylish-contact:focus {
+        background: #ffe600;
+        color: #0b5cff;
+      }
+      .stylish-contact-text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+      @media (max-width: 900px) {
+        .stylish-navbar-container {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0.5rem 1rem;
+        }
+        .stylish-nav {
+          margin-left: 0;
+          width: 100%;
+        }
+        .stylish-menu {
+          gap: 1.2rem;
+        }
+        .stylish-contact {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+      @media (max-width: 600px) {
+        .stylish-navbar-container {
+          padding: 0.5rem 0.5rem;
+        }
+        .stylish-logo-img {
+          height: 38px;
+        }
+        .stylish-link {
+          font-size: 1rem;
+          padding: 8px 10px;
+        }
+      }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="index.html"><img src="../../Images/logo.png" alt="HIENIS logo" class="site-logo" /></a>
-      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav id="site-nav" class="site-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="../about/index.html">About</a></li>
-          <li><a href="../products/index.html">Products</a></li>
-          <li><a href="../contact/index.html">Contact</a></li>
+  <header class="site-header stylish-navbar">
+    <div class="container stylish-navbar-container">
+      <a class="logo stylish-logo" href="index.html">
+        <img src="../../Images/logo.png" alt="HIENIS logo" class="site-logo stylish-logo-img" />
+      </a>
+      <nav id="site-nav" class="site-nav stylish-nav">
+        <ul class="stylish-menu">
+          <li><a href="index.html" class="stylish-link">Home</a></li>
+          <li><a href="../about/index.html" class="stylish-link">About</a></li>
+          <li><a href="../products/index.html" class="stylish-link">Products</a></li>
+          <li><a href="../contact/index.html" class="stylish-link">Contact</a></li>
         </ul>
       </nav>
-      <a class="header-contact" href="https://wa.me/919444038255" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" role="img">
+      <a class="header-contact stylish-contact" href="https://wa.me/919444038255" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" role="img" style="vertical-align:middle;width:28px;height:28px;">
           <path fill="#0a7f2d" d="M20.52 3.48A11.96 11.96 0 0012 0C5.373 0 .001 5.373.001 12c0 2.116.554 4.186 1.603 6.03L0 24l6.166-1.596A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.187-1.243-6.17-3.48-8.52zM12 21.5c-1.73 0-3.402-.433-4.89-1.25l-.35-.19-3.667.95.989-3.558-.23-.37A9.51 9.51 0 012.5 12c0-5.247 4.253-9.5 9.5-9.5S21.5 6.753 21.5 12 17.247 21.5 12 21.5z"/>
           <path fill="#fff" d="M17.6 14.2c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.18.2-.36.22-.66.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.51-1.79-1.69-2.09-.18-.3-.02-.46.13-.61.13-.12.3-.32.45-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.49-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.36-.27.3-1.02.99-1.02 2.42 0 1.43 1.04 2.82 1.18 3.02.14.2 2.04 3.12 4.95 4.38 2.9 1.26 2.9.84 3.42.79.52-.05 1.69-.69 1.93-1.36.24-.67.24-1.24.17-1.36-.06-.12-.24-.18-.54-.33z"/>
         </svg>
-        <span>
+        <span class="stylish-contact-text">
           <span class="contact-note">Call us for any question</span>
           <span class="contact-phone">+91 94440 38255</span>
         </span>
@@ -91,68 +213,83 @@
       <div class="product-slider-container">
         <button class="product-slider-arrow left" id="productSliderPrev">&#8249;</button>
         <div class="product-slider-track" id="productSliderTrack">
+          <!-- Product cards are rendered statically for reliability -->
           <article class="card product-card">
-            <img src="../products/images/axial-fan.png" alt="Axial Fan" />
-            <h3>Axial Fan</h3>
-            <p>Efficient air movement for ventilation and cooling in industrial and commercial...</p>
-            <a href="../products/axial-fan.html" class="btn">Read More</a>
+            <img src="../products/images/axial-fan.png" alt="Industrial Fans" />
+            <h3>Industrial Fans</h3>
+            <p>High-performance fans for ventilation, cooling, and air circulation in industrial and commercial environments. Includes Axial Fan, Jet Fan, Fan Section, Smoke Exhaust Unit, Inline Fan, and HVLS Fan.</p>
+            <a href="../products/industrial-fans.html" class="btn">Read More</a>
           </article>
           <article class="card product-card">
-            <img src="../products/images/jet-fan.png" alt="Jet Fan" />
-            <h3>Jet Fan</h3>
-            <p>High-velocity fans for tunnel and large space ventilation, designed for powerful air movement and smoke extraction.</p>
-            <a href="../products/jet-fan.html" class="btn">Read More</a>
+            <img src="../products/images/NBR SHEETS.jpeg" alt="Nitrile Rubber - Sheets and Tubes" />
+            <h3>Nitrile Rubber - Sheets and Tubes</h3>
+            <p>High-quality NBR sheets and tubes for industrial sealing applications.</p>
+            <a href="../products/nbr-sheets-tubes.html" class="btn">Read More</a>
           </article>
           <article class="card product-card">
-            <img src="../products/images/fan-section.png" alt="Fan Section" />
-            <h3>Fan Section</h3>
-            <p>Modular fan units for air handling and ventilation, designed for efficient airflow and integration in HVAC systems.</p>
-            <a href="../products/fan-section.html" class="btn">Read More</a>
+            <img src="../products/images/XLPE-SHEETS.jpeg" alt="XLPE Foam - Sheets and Tubes" />
+            <h3>XLPE Foam - Sheets and Tubes</h3>
+            <p>High-performance closed-cell thermal insulation for HVAC, plumbing, and cleanroom applications.</p>
+            <a href="../products/xlpe-sheets-tubes.html" class="btn">Read More</a>
+          </article>
+          <article class="card product-card">
+            <img src="../products/images/thermotile-panel.jpeg" alt="Thermotile Insulation Panel" />
+            <h3>Thermotile Insulation Panel</h3>
+            <p>High-performance thermal insulation panel for commercial buildings and terrace slabs.</p>
+            <a href="../products/thermotile-panel.html" class="btn">Read More</a>
+          </article>
+          <article class="card product-card">
+            <img src="../products/images/turnkey-insulation.jpeg" alt="Turnkey Thermal & Acoustic Insulation Solutions" />
+            <h3>Turnkey Thermal & Acoustic Insulation Solutions</h3>
+            <p>Comprehensive turnkey insulation for energy efficiency and noise control across multiple sectors.</p>
+            <a href="../products/turnkey-insulation.html" class="btn">Read More</a>
+          </article>
+          <article class="card product-card">
+            <img src="../products/images/air-bubble.png" alt="Reflective Air Bubble Insulation" />
+            <h3>Reflective Air Bubble Insulation</h3>
+            <p>Lightweight reflective insulation for thermal and moisture protection.</p>
+            <a href="../products/air-bubble.html" class="btn">Read More</a>
           </article>
           <article class="card product-card">
             <img src="../products/images/smoke-exhaust-unit.png" alt="Smoke Exhaust Unit" />
             <h3>Smoke Exhaust Unit</h3>
-            <p>Specialized fan unit for smoke extraction and emergency ventilation in commercial and industrial buildings.</p>
+            <p>Dedicated smoke extraction systems for safety applications.</p>
             <a href="../products/smoke-exhaust-unit.html" class="btn">Read More</a>
           </article>
           <article class="card product-card">
-            <img src="../products/images/inline-fan.png" alt="Inline Fan" />
-            <h3>Inline Fan</h3>
-            <p>Compact and powerful fans for ducted ventilation, ideal for boosting airflow in HVAC systems and confined spaces.</p>
-            <a href="../products/inline-fan.html" class="btn">Read More</a>
-          </article>
-          <article class="card product-card">
-            <img src="../products/images/hvls-fan.png" alt="HVLS Fan" />
-            <h3>HVLS Fan</h3>
-            <p>High-volume, low-speed fans for large spaces, providing energy-efficient air circulation and comfort in industrial and commercial environments.</p>
-            <a href="../products/hvls-fan.html" class="btn">Read More</a>
+            <img src="../products/images/polycarbonate-sheet.jpeg" alt="Other Ancillary Products" />
+            <h3>Other Ancillary Products</h3>
+            <p>Polycarbonate sheets, turbo ventilators, insulation slabs, tapes, ducts, and adhesives for industrial and commercial use.</p>
+            <a href="../products/ancillary-products.html" class="btn">Read More</a>
           </article>
           <article class="card product-card">
             <img src="../products/images/rockwool-stonewool.png" alt="Rockwool / Stonewool Insulation" />
             <h3>Rockwool / Stonewool Insulation</h3>
-            <p>High-temperature insulation made from volcanic rock, ideal for industrial and commercial applications up to 750°C.</p>
+            <p>Non-combustible mineral wool insulation for fire-safe applications.</p>
             <a href="../products/rockwool-stonewool.html" class="btn">Read More</a>
           </article>
           <article class="card product-card">
             <img src="../products/images/air-bubble.png" alt="Air Bubble Insulations" />
             <h3>Air Bubble Insulations</h3>
-            <p>Reflective thermal insulation with polyethylene bubbles and foil, for efficient heat barrier in roofs, walls, and ducts.</p>
+            <p>Lightweight reflective insulation for thermal and moisture protection.</p>
             <a href="../products/air-bubble.html" class="btn">Read More</a>
           </article>
           <article class="card product-card">
             <img src="../products/images/elexiq-coolguard.png" alt="ELEXIQ COOLGUARD® Pre Insulated Metal Sheet" />
             <h3>ELEXIQ COOLGUARD® Pre Insulated Metal Sheet</h3>
-            <p>Premium-grade pre-insulated metal roofing sheet with 3-layer protection, engineered for superior insulation and durability.</p>
+            <p>Advanced pre-insulated metal sheets for energy-efficient systems.</p>
             <a href="../products/elexiq-coolguard.html" class="btn">Read More</a>
           </article>
           <article class="card product-card">
             <img src="../products/images/fiberglass-wool.png" alt="Fiberglass Wool Insulation Roll" />
             <h3>Fiberglass Wool Insulation Roll</h3>
-            <p>Lightweight, resilient glass wool insulation for commercial, industrial, and residential heating, air conditioning, and dual-temperature ducts.</p>
+            <p>Lightweight insulation material for high-temperature applications.</p>
             <a href="../products/fiberglass-wool.html" class="btn">Read More</a>
           </article>
         </div>
         <button class="product-slider-arrow right" id="productSliderNext">&#8250;</button>
+      </div>
+      <script src="../../js/productsData.js"></script>
       </div>
       <script src="js/main.js"></script>
     </section>
