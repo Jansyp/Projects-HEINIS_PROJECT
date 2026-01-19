@@ -230,13 +230,7 @@ const productsData = [
     `,
     pageUrl: 'ancillary-products.html'
   },
-  {
-    id: 'smoke-exhaust',
-    title: 'Smoke Exhaust Unit',
-    shortDescription: 'Dedicated smoke extraction systems for safety applications',
-    fullDescription: 'Complete smoke exhaust systems meeting safety standards for emergency ventilation. Essential for buildings requiring controlled smoke removal.',
-    pageUrl: 'smoke-exhaust-unit.html'
-  }
+  // Removed 'Smoke Exhaust Unit' product
 ];
 
 const ITEMS_PER_PAGE = 6;

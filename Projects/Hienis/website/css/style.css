@@ -1,3 +1,20 @@
+/* Ensure contact number in navbar is visible on black background */
+.stylish-contact-text, .stylish-contact-text .contact-note, .stylish-contact-text .contact-phone {
+	color: #fff !important;
+}
+/* Stylish Navbar Global Styles */
+.stylish-navbar {
+	background: #111 !important;
+	box-shadow: 0 2px 12px rgba(11,92,255,0.08);
+}
+.stylish-link {
+	color: #fff !important;
+	font-weight: 700;
+}
+.stylish-link:hover, .stylish-link:focus {
+	color: #ffe600 !important;
+	background: #222 !important;
+}
 /* Root stylesheet cleared — per-page styles live in each page folder. */
 /* If you need a shared global stylesheet, add it here. */
 
