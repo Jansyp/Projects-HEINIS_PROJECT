@@ -1,3 +1,116 @@
+/* Modern Contact Us Redesign */
+.contact-modern-wrapper {
+  max-width: 1100px;
+  margin: 3rem auto 2rem auto;
+  padding: 0 1rem;
+}
+.contact-modern-heading {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #1a237e;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+.contact-modern-grid {
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-modern-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #2563eb13;
+  padding: 2.2rem 2rem 2rem 2rem;
+  flex: 1 1 350px;
+  min-width: 320px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contact-modern-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #1a237e;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+}
+.contact-modern-form input,
+.contact-modern-form textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid #dbeafe;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background: #f5faff;
+  transition: border 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  box-shadow: 0 1px 4px #2563eb0a;
+}
+.contact-modern-form input:focus,
+.contact-modern-form textarea:focus {
+  border: 1.5px solid #2563eb;
+  outline: none;
+  box-shadow: 0 2px 12px #2563eb33;
+}
+.contact-modern-form button {
+  background: linear-gradient(90deg, #2563eb 60%, #1d4ed8 100%);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #2563eb22;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  letter-spacing: 0.03em;
+}
+.contact-modern-form button:hover {
+  background: linear-gradient(90deg, #1d4ed8 60%, #2563eb 100%);
+  box-shadow: 0 4px 24px #2563eb33;
+  transform: translateY(-2px) scale(1.03);
+}
+.contact-modern-info h2 {
+  color: #2563eb;
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+.contact-modern-info p {
+  color: #222;
+  font-size: 1.08rem;
+  margin: 0 0 1.2rem 0;
+}
+.contact-modern-map {
+  margin-top: 1.2rem;
+  flex: 1;
+}
+.contact-modern-map iframe {
+  width: 100%;
+  height: 220px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+@media (max-width: 900px) {
+  .contact-modern-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .contact-modern-card {
+    max-width: 100%;
+    padding: 1.5rem 1rem 1.2rem 1rem;
+  }
+  .contact-modern-heading {
+    font-size: 2rem;
+  }
+}
 /* Full-width banner container for contact page */
 .contact-banner-outer {
   width: 100vw;
