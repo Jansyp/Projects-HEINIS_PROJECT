@@ -64,15 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
   track.addEventListener('mouseleave', startAutoScroll);
   startAutoScroll();
 });
-// Mobile nav toggle and simple contact form handling (home local)
+// Simple hero slider (keep only this part)
 document.addEventListener('DOMContentLoaded', function(){
-  var toggle = document.getElementById('nav-toggle');
-  var nav = document.getElementById('site-nav');
-  if(toggle){
-    toggle.addEventListener('click', function(){
-      nav.classList.toggle('open');
-    });
-  }
   // Simple hero slider
   var slides = document.querySelectorAll('.hero-slide');
   var current = 0;

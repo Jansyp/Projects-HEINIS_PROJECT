@@ -1,25 +1,38 @@
 @media (max-width: 900px) {
-	#nav-toggle {
-		display: block !important;
-		color: #fff !important;
-		font-size: 2.2rem;
-		background: transparent;
-		border: none;
-		position: static;
-		margin-left: 18px;
-		margin-top: 0;
-		z-index: 1100;
-		cursor: pointer;
-		vertical-align: middle;
-	}
-	.stylish-navbar-container {
-		flex-direction: row;
-		align-items: center;
-	}
-	.logo {
-		display: flex;
-		align-items: center;
-	}
+   #nav-toggle {
+	   display: block !important;
+	   color: #ff9800 !important;
+	   font-size: 2.2rem !important;
+	   background: transparent !important;
+	   border: none !important;
+	   position: static !important;
+	   margin-left: 18px !important;
+	   margin-top: 0 !important;
+	   z-index: 1100 !important;
+	   cursor: pointer !important;
+	   vertical-align: middle !important;
+   }
+   .stylish-navbar-container {
+	   flex-direction: row;
+	   align-items: center;
+   }
+   .logo {
+	   display: flex;
+	   align-items: center;
+   }
+   #site-nav ul {
+	   display: none;
+   }
+   #site-nav.open ul {
+	   display: flex !important;
+	   flex-direction: column;
+	   gap: 1.2rem;
+	   background: #111;
+	   width: 100vw;
+	   padding: 1.5rem 0;
+	   margin: 0;
+	   box-shadow: none;
+   }
 }
 /* Ensure contact number in navbar is visible on black background */
 .stylish-contact-text, .stylish-contact-text .contact-note, .stylish-contact-text .contact-phone {

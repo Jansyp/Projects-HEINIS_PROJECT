@@ -358,13 +358,6 @@ function setupEventListeners() {
   }
 }
 
-// Helper function to update product description (call this to update descriptions)
-function updateProductDescription(productId, shortDescription, fullDescription) {
-  const product = productsData.find(p => p.id === productId);
-  if (product) {
-    product.shortDescription = shortDescription;
-    product.fullDescription = fullDescription;
-    loadProducts(); // Reload to show updated description
-  }
-}
+
+// No local nav toggle code here. All nav toggling is handled by global js/main.js
 

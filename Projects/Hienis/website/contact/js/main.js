@@ -1,13 +1,5 @@
-// Mobile nav toggle and contact form handling (local)
+// Contact form handling only
 document.addEventListener('DOMContentLoaded', function(){
-  var toggle = document.getElementById('nav-toggle');
-  var nav = document.getElementById('site-nav');
-  if(toggle){
-    toggle.addEventListener('click', function(){
-      nav.classList.toggle('open');
-    });
-  }
-
   var form = document.getElementById('contact-form');
   if(form){
     form.addEventListener('submit', function(e){
