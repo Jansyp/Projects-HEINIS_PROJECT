@@ -64,32 +64,41 @@ document.addEventListener('DOMContentLoaded', function() {
   track.addEventListener('mouseleave', startAutoScroll);
   startAutoScroll();
 });
-// Simple hero slider (keep only this part)
-document.addEventListener('DOMContentLoaded', function(){
-  // Simple hero slider
-  var slides = document.querySelectorAll('.hero-slide');
-  var current = 0;
-  function showSlide(idx){
+// 3D Rotating Slider Animation
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slider .slide');
+  let current = 0;
+  const total = slides.length;
+  let intervalId;
+
+  function rotateSlider(idx) {
+    const angle = (360 / total) * idx;
+    slider.style.transform = `rotateY(-${angle}deg)`;
     current = idx;
-    slides.forEach(function(s,i){
-      s.classList.toggle('active', i===idx);
-      s.style.display = (i===idx) ? 'flex' : 'none';
-    });
   }
-  if(slides.length){
-    showSlide(0);
-    var nextBtn = document.querySelector('.hero-next');
-    var prevBtn = document.querySelector('.hero-prev');
-    if(nextBtn) nextBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      var nextIdx = (current+1)%slides.length;
-      showSlide(nextIdx);
-    });
-    if(prevBtn) prevBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      var prevIdx = (current-1+slides.length)%slides.length;
-      showSlide(prevIdx);
-    });
-    setInterval(function(){ showSlide((current+1)%slides.length) }, 6000);
+
+  function nextSlide() {
+    rotateSlider((current + 1) % total);
   }
+
+  function prevSlide() {
+    rotateSlider((current - 1 + total) % total);
+  }
+
+  // Optional: Add navigation buttons if needed
+  // document.querySelector('.slider-next').addEventListener('click', nextSlide);
+  // document.querySelector('.slider-prev').addEventListener('click', prevSlide);
+
+  // Auto-rotate every 4 seconds
+  intervalId = setInterval(nextSlide, 4000);
+
+  // Pause on hover
+  slider.addEventListener('mouseenter', () => clearInterval(intervalId));
+  slider.addEventListener('mouseleave', () => {
+    intervalId = setInterval(nextSlide, 4000);
+  });
+
+  // Initialize
+  rotateSlider(0);
 });
