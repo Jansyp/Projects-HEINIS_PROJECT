@@ -1,3 +1,18 @@
+/* Menu bar and footer background image */
+.site-header.stylish-navbar {
+  background: url('../../images/your-background-image.jpg') center center/cover no-repeat !important;
+}
+#global-footer, .site-footer {
+  background: url('../../images/your-background-image.jpg') center center/cover no-repeat !important;
+}
+.site-header.stylish-navbar, .site-header.stylish-navbar * {
+  color: #111 !important;
+  fill: #111 !important;
+}
+.site-header.stylish-navbar .stylish-menu .stylish-link:hover,
+.site-header.stylish-navbar .stylish-menu .stylish-link:focus {
+  color: #ffc107 !important;
+}
 /* Slide caption overlay for carousel */
 .slide-caption {
   position: absolute;

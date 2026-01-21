@@ -1,3 +1,14 @@
+/* Menu bar and footer background image */
+.site-header.stylish-navbar {
+  background: url('../../images/your-background-image.jpg') center center/cover no-repeat !important;
+}
+#global-footer, .site-footer {
+  background: url('../../images/your-background-image.jpg') center center/cover no-repeat !important;
+}
+.site-header.stylish-navbar, .site-header.stylish-navbar * {
+  color: #111 !important;
+  fill: #111 !important;
+}
 /* Cinematic product detail styles */
 .cinematic-btn {
   display: inline-block;
