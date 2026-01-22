@@ -68,35 +68,19 @@
 
 /* Modern Global Footer Styles */
 .site-footer {
-	background: #181818;
-	color: #f3f3f3;
-	font-family: var(--main-font);
-	margin-top: 3rem;
-	box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
-	position: relative;
+	background-image: url('/website/images/BackgroundTile.jpeg');
+	background-color: #333;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
 }
-.footer-top {
-	background: linear-gradient(90deg, #ffc144 0%, #ffe7b0 100%);
-	color: #222;
-	padding: 1.5rem 0;
-	text-align: center;
-	font-size: 1.5rem;
-	font-weight: 700;
-	letter-spacing: 0.5px;
-}
+
 .footer-contact {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 2.5rem;
-}
-.footer-main {
-	background: #181818;
-	padding: 2.5rem 0 1.5rem 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
 }
 .footer-content {
 	display: flex;
@@ -144,7 +128,7 @@
 }
 .footer-bottom {
 	text-align: center;
-	color: #fff;
+	color: #111;
 	font-size: 1rem;
 	margin-bottom: 1.5rem;
 	display: flex;
@@ -199,13 +183,7 @@
 	.footer-logo {
 		height: 50px;
 	}
-	.footer-backtotop {
-		right: 16px;
-		bottom: 16px;
-		width: 44px;
-		height: 44px;
-		font-size: 1.3rem;
-	}
+	
 	.footer-top {
 		font-size: 1.1rem;
 		padding: 1rem 0;
@@ -221,7 +199,7 @@
 
 /* Hero background and CTA styles */
 .hero{
-	background-image: url("../../Images/background.jpg");
+	background-image: url("../../website//images/BackgroundTile.jpeg");
 	background-size: cover;
 	background-position: center;
 	color: #fff;

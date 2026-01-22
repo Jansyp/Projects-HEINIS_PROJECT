@@ -1,15 +1,9 @@
-#global-footer, .site-footer {
-  background: url('../../images/BackgroundTile.jpg') center center/cover no-repeat !important;
-}
 .stylish-logo, .site-logo, .stylish-logo-img {
   background: transparent !important;
 }
 /* Menu bar and footer background image */
 .site-header.stylish-navbar {
   background: url('../../images/your-background-image.jpg') center center/cover no-repeat !important;
-}
-#global-footer, .site-footer {
-  background: url('../../images/BackgroundTile.jpg') center center/cover no-repeat !important;
 }
 .site-header.stylish-navbar, .site-header.stylish-navbar * {
   color: #111 !important;
@@ -294,7 +288,7 @@ input[type=radio]:checked {
   box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
   transform: translate3d(-20%, 0, -100px);
 }
-}
+
 .product-card:hover {
   transform: scale(1.06) translateY(-8px);
   box-shadow: 0 8px 32px rgba(30,60,90,0.13);
@@ -476,8 +470,6 @@ body {
 }
 
 /* PRODUCTS */
-  align-items: center;
-}
 .card:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 8px 32px rgba(30,60,90,0.13);
@@ -534,9 +526,6 @@ body {
 .about .btn:hover {
   background: #0ea03b;
   color: #fff;
-}
-  padding: 60px 40px;
-  text-align: center;
 }
 
 .about p {
