@@ -207,6 +207,23 @@
       .then(html => {
         document.getElementById('global-footer').innerHTML = html;
       });
-  </script
+  </script>
+
+  <!-- Mobile nav toggle for all pages -->
+  <script>
+  // This ensures the hamburger menu works everywhere
+  // Place this at the end of the body, after nav exists
+  (function(){
+    document.addEventListener('DOMContentLoaded', function(){
+      var toggle = document.getElementById('nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if(toggle && nav){
+        toggle.addEventListener('click', function(){
+          nav.classList.toggle('open');
+        });
+      }
+    });
+  })();
+  </script>
 </body>
 </html>

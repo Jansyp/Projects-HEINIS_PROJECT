@@ -1,16 +1,32 @@
 @media (max-width: 900px) {
    #nav-toggle {
 	   display: block !important;
-	   color: #ff9800 !important;
+	   color: #111 !important;
 	   font-size: 2.2rem !important;
-	   background: transparent !important;
-	   border: none !important;
+	   background: #fff !important;
+	   border: 1.5px solid #ccc !important;
+	   border-radius: 8px !important;
 	   position: static !important;
 	   margin-left: 18px !important;
 	   margin-top: 0 !important;
 	   z-index: 1100 !important;
 	   cursor: pointer !important;
 	   vertical-align: middle !important;
+	   transition: background 0.2s, color 0.2s, border 0.2s;
+   }
+   #nav-toggle svg rect {
+	   fill: #111 !important;
+	   transition: fill 0.2s;
+   }
+   #nav-toggle:active, #nav-toggle.open, #nav-toggle[aria-expanded="true"] {
+	   background: #fff !important;
+	   color: #111 !important;
+	   border: 1.5px solid #222 !important;
+   }
+   #nav-toggle:active svg rect,
+   #nav-toggle.open svg rect,
+   #nav-toggle[aria-expanded="true"] svg rect {
+	   fill: #111 !important;
    }
    .stylish-navbar-container {
 	   flex-direction: row;
@@ -27,7 +43,7 @@
 	   display: flex !important;
 	   flex-direction: column;
 	   gap: 1.2rem;
-	   background: #111;
+	   background: transparent !important;
 	   width: 100vw;
 	   padding: 1.5rem 0;
 	   margin: 0;
@@ -346,18 +362,18 @@ body{padding-top:72px}
 	  #site-nav {
 	    display: none;
 	  }
-	  .site-nav.open {
-	    display: block !important;
-	    position: absolute;
-	    left: 0;
-	    right: 0;
-	    top: 60px;
-	    background: #111;
-	    padding: 0;
-	    border-top: none;
-	    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-	    z-index: 1000;
-	  }
+	.site-nav.open {
+		display: block !important;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 60px;
+		background: transparent !important;
+		padding: 0;
+		border-top: none;
+		box-shadow: none;
+		z-index: 1000;
+	}
 	  .site-nav.open ul {
 	    display: flex !important;
 	    flex-direction: column;
