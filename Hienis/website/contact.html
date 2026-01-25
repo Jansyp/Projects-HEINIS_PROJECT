@@ -10,3 +10,13 @@
     Redirecting to <a href="contact/index.html">contact</a>.
   </body>
 </html>
+
+<!-- Global Footer Include -->
+  <div id="global-footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('global-footer').innerHTML = html;
+      });
+  </script>

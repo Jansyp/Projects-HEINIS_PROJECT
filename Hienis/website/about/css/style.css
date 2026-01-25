@@ -278,6 +278,11 @@ body{font-family: system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial
   border-top: 1px solid rgba(0,0,0,0.04);
   padding: 1rem;
   margin-top: 2rem;
+  background-image: url('/website/images/BackgroundTile.jpeg');
+  background-color: #333;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .muted{color:var(--muted)}
 

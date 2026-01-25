@@ -537,7 +537,11 @@ body {
 
 /* FOOTER */
 footer, .site-footer {
-  background: #fff;
+  background-image: url('/website/images/BackgroundTile.jpeg');
+  background-color: #333;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #222;
   text-align: center;
   padding: 28px 0 18px 0;
