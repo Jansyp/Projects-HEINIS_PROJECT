@@ -215,7 +215,7 @@
 
 /* Hero background and CTA styles */
 .hero{
-	background-image: url("../../website//images/BackgroundTile.jpeg");
+	background-image: url("../images/BackgroundTile.jpeg");
 	background-size: cover;
 	background-position: center;
 	color: #fff;
