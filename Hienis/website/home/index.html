@@ -157,6 +157,15 @@
         <button class="product-slider-arrow right" id="productSliderNext">&#8250;</button>
       </div>
       <script src="../../js/productsData.js"></script>
+      <script>
+        // Fallback for GitHub Pages if productsData.js fails to load
+        var productsScript = document.querySelector('script[src="../../js/productsData.js"]');
+        productsScript.onerror = function() {
+          var altScript = document.createElement('script');
+          altScript.src = '/Projects-HEINIS_PROJECT/Hienis/js/productsData.js';
+          document.head.appendChild(altScript);
+        };
+      </script>
       </div>
       <script src="js/main.js"></script>
     </section>

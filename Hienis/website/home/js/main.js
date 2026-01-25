@@ -30,7 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // If productsData is not global, load it
   if (typeof productsData === 'undefined') {
     const script = document.createElement('script');
-    script.src = '../../js/productsData.js';
+    script.src = '../../js/productsData.js'; // fallback for local
+    // Try GitHub Pages path if not found
+    script.onerror = function() {
+      script.src = '/Projects-HEINIS_PROJECT/Hienis/js/productsData.js';
+      document.head.appendChild(script);
+    };
     script.onload = renderProducts;
     document.head.appendChild(script);
   } else {
