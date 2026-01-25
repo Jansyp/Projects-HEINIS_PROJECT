@@ -223,17 +223,19 @@
 /* Slider styles for full-width, fade, overlay */
 .hero-slider {
 	position: relative;
-	width: 100%;
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
 	overflow: hidden;
-	min-height: 400px;
 }
 .hero-slide {
 	position: absolute;
-	top: 0; left: 0; width: 100%; height: 100%;
+	top: 0; left: 0; width: 100vw; height: 100vh;
 	opacity: 0;
 	z-index: 1;
 	transition: opacity 1s cubic-bezier(.4,0,.2,1);
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
 	display: flex;
