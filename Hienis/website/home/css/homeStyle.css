@@ -1,3 +1,9 @@
+/* Remove border from hamburger icon */
+.hamburger, .menu-toggle, .navbar-toggler, .stylish-hamburger {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent;
+}
 html, body {
   height: 100%;
   margin: 0;
@@ -219,6 +225,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   perspective: 1400px;
   transform-style: preserve-3d;
+  overflow: visible;
 }
 
 input[type=radio] {
