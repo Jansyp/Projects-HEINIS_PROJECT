@@ -1,3 +1,13 @@
+/* Remove border and box-shadow from hamburger icon container */
+.stylish-navbar-container {
+  border: none !important;
+  box-shadow: none !important;
+}
+#nav-toggle {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
 /* Menu bar and footer background image */
 .site-header.stylish-navbar {
   background:  center center/cover no-repeat !important;
