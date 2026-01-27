@@ -59,12 +59,14 @@
   }
   autoSlide();
 
-  // Pause auto-slide on manual radio click
-  radios.forEach(radio => {
+  // Pause and stop auto-slide on manual radio click
+  radios.forEach((radio, idx) => {
     radio.addEventListener('change', () => {
       pauseAuto = true;
       clearTimeout(autoSlideTimer);
-      setTimeout(() => { pauseAuto = false; autoSlide(); }, 2000);
+      // Notify 3D carousel to update current index and stop auto-rotate
+      window.dispatchEvent(new CustomEvent('carousel3d-set-current', { detail: { idx } }));
+      window.dispatchEvent(new CustomEvent('carousel3d-stop-auto'));
     });
   });
 })();
