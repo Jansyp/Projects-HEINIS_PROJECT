@@ -212,9 +212,10 @@ body {
 
 #slider {
   position: relative;
-  width: 50%;
+  width: 100%;
+  max-width: 900px;
   height: 32vw;
-  margin: 150px auto;
+  margin: 100px auto;
   font-family: 'Helvetica Neue', sans-serif;
   perspective: 1400px;
   transform-style: preserve-3d;
