@@ -31,7 +31,7 @@
     if (Math.abs(dx) > 40) {
       if (dx < 0) nextSlide();
       else prevSlide();
-      isDragging = false;
+      isDragging = false; // Prevent further transitions until new drag
       setTimeout(() => { pauseAuto = false; autoSlide(); }, 2000);
       slider.classList.remove('dragging');
     }
