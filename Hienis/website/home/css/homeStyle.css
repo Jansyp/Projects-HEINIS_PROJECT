@@ -355,6 +355,7 @@ body {
   padding: 60px 0 40px 0;
   overflow: hidden; */
   perspective: 1000px;
+  overflow: hidden;
 }
 .slider {
   position: absolute;
