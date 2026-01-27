@@ -91,9 +91,13 @@ document.addEventListener('DOMContentLoaded', function() {
     rotateSlider((current - 1 + total) % total);
   }
 
-  // Optional: Add navigation buttons if needed
-  // document.querySelector('.slider-next').addEventListener('click', nextSlide);
-  // document.querySelector('.slider-prev').addEventListener('click', prevSlide);
+  const navToggle = document.getElementById('nav-toggle');
+  const siteNav = document.getElementById('site-nav');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
 
   // Auto-rotate every 4 seconds
   intervalId = setInterval(nextSlide, 4000);
