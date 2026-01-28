@@ -9,7 +9,7 @@
 </head>
 <body>
   <!-- Global Stylish Navbar -->
-  <header class="site-header stylish-navbar">
+  <header class="site-header stylish-navbar ">
     <div class="container stylish-navbar-container">
       <a class="logo stylish-logo" href="../home/index.html">
         <img src="../../website/images/logo.png" alt="HIENIS logo" class="site-logo stylish-logo-img" />
@@ -183,3 +183,21 @@
   </script>
 </body>
 </html>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const navToggle = document.getElementById('nav-toggle');
+  const siteNav = document.getElementById('site-nav');
+
+  if (!navToggle || !siteNav) return;
+
+  navToggle.addEventListener('click', () => {
+    siteNav.classList.toggle('open');
+    navToggle.setAttribute(
+      'aria-expanded',
+      siteNav.classList.contains('open')
+    );
+  });
+});
+</script>
