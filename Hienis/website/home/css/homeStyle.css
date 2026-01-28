@@ -184,8 +184,8 @@ main {
 }
 /* --- 3D Slider Global Styles --- */
 .slider-container {
-  position: relative;
-  width: 800px;
+  width: 100%;
+  max-width: 900px;
   height: 400px;
   margin: 0 auto;
   perspective: 1000px;
@@ -667,8 +667,8 @@ body {
 @media (min-width: 901px) {
 
   .slider-container {
-    height: 520px;          /* ⬅ increase carousel height */
-    perspective: 1200px;    /* keeps 3D depth looking natural */
+    height: 520px;
+    perspective: 1200px;
   }
 
   .slide {
@@ -708,20 +708,29 @@ body {
   #site-nav.open {
     display: block;
   }
-  .slider-container {
-    height: 340px;          /* ⬅ increase overall carousel height */
+   /* Remove huge top space */
+  #slider {
+    margin: 8px auto 16px auto !important;  /* tighter margin */
+    height: clamp(280px, 32vw, 320px) !important; /* fluid height */
   }
 
+  /* Make slides fill the slider */
+   #slider label,
   .slide {
-    height: 300px;          /* ⬅ THIS controls image height */
-    top: 20px;
+    height: 100% !important;
+    top: 0 !important;
   }
 
-  .slide img {
-    height: 100%;
+    .slide img {
     width: 100%;
-    object-fit: cover;      /* fills without distortion */
+    height: 100%;
+    object-fit: cover;
   }
+  .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10001;
+}
 }
 
 
