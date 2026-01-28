@@ -663,6 +663,25 @@ body {
     background: rgba(0,0,0,0.32);
   }
 }
+/* ===== DESKTOP: INCREASE 3D CAROUSEL IMAGE HEIGHT ===== */
+@media (min-width: 901px) {
+
+  .slider-container {
+    height: 520px;          /* ⬅ increase carousel height */
+    perspective: 1200px;    /* keeps 3D depth looking natural */
+  }
+
+  .slide {
+    height: 90%;            /* ⬅ taller slides */
+    top: 5%;                /* center vertically */
+  }
+
+  .slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;      /* fill without distortion */
+  }
+}
 
 @media (max-width: 600px) {
   .slide-caption {
@@ -688,6 +707,20 @@ body {
 
   #site-nav.open {
     display: block;
+  }
+  .slider-container {
+    height: 340px;          /* ⬅ increase overall carousel height */
+  }
+
+  .slide {
+    height: 300px;          /* ⬅ THIS controls image height */
+    top: 20px;
+  }
+
+  .slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;      /* fills without distortion */
   }
 }
 
