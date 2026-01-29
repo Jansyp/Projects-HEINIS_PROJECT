@@ -280,14 +280,21 @@ function createProductTile(product) {
   tile.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
 
   let imageHtml = '';
-  if (product.id === 'xlpe-foam') {
-    imageHtml = `<img src='images/XLPE-SHEETS.png' alt='XLPE Sheets & Tubes Insulation' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
-  } else if (product.id === 'nitrile-rubber') {
-    imageHtml = `<img src='images/NBR SHEETS.png' alt='Nitrile Rubber Sheets & Tubes' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
-  } else if (product.id === 'fiberglass') {
-    imageHtml = `<img src='images/fiberglass-wool.png' alt='Fiber Glasswool' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
-  } else if (product.id === 'industrial-fans') {
-    imageHtml = `<img src='images/Industrial-Fans.jfif' alt='Industrial Fans' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
+  const imageMap = {
+    'xlpe-foam': 'XLPE-SHEETS.png',
+    'nitrile-rubber': 'NBR SHEETS.png',
+    'fiberglass': 'fiberglass-wool.png',
+    'industrial-fans': 'Industrial-Fans.jfif',
+    'rockwool': 'Rockwool & Stonewool.png',
+    'elexiq-coolguard': 'ELEXIQ CoolGuard - Pre-insulated Metal Sheets.png',
+    'air-bubble': 'Reflective Air Bubble Insulation.png',
+    'turnkey-insulation': 'Turnkey Thermal & Acoustic Insulation Solution.png',
+    'thermotile-panel': 'Thermotile Insulation Panel.png',
+    'ancillary-products': 'Ancillary Products.png'
+  };
+
+  if (imageMap[product.id]) {
+    imageHtml = `<img src='images/${imageMap[product.id]}' alt='${product.title}' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
   } else {
     imageHtml = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="width:140px;height:140px;opacity:0.3;">
       <rect width="200" height="200" fill="none"/>

@@ -27,14 +27,14 @@ const productsData = [
     id: 'rockwool',
     title: 'Rockwool & Stonewool',
     shortDescription: 'Non-combustible mineral wool insulation for fire-safe applications',
-    image: 'rockwool-stonewool.png',
+    image: 'Rockwool & Stonewool.png',
     pageUrl: '../products/rockwool-stonewool.html'
   },
   {
     id: 'elexiq-coolguard',
     title: 'ELEXIQ CoolGuard - Pre-insulated Metal Sheets',
     shortDescription: 'Advanced pre-insulated metal sheets for energy-efficient systems',
-    image: 'elexiq-coolguard.png',
+    image: 'ELEXIQ CoolGuard - Pre-insulated Metal Sheets.png',
     pageUrl: '../products/elexiq-coolguard.html'
   },
   {
@@ -48,7 +48,7 @@ const productsData = [
     id: 'air-bubble',
     title: 'Reflective Air Bubble Insulation',
     shortDescription: 'Lightweight reflective insulation for thermal and moisture protection',
-    image: 'air-bubble.png',
+    image: 'Reflective Air Bubble Insulation.png',
     pageUrl: '../products/air-bubble.html'
   },
   {
@@ -85,6 +85,27 @@ const productsData = [
     shortDescription: 'High-velocity fans for tunnel and large space ventilation, designed for powerful air movement and smoke extraction.',
     image: 'jet-fan.png',
     pageUrl: '../products/jet-fan.html'
+  },
+  {
+    id: 'turnkey-insulation',
+    title: 'Turnkey Thermal & Acoustic Insulation Solutions',
+    shortDescription: 'Comprehensive turnkey insulation for energy efficiency and noise control across multiple sectors.',
+    image: 'Turnkey Thermal & Acoustic Insulation Solution.png',
+    pageUrl: '../products/turnkey-insulation.html'
+  },
+  {
+    id: 'thermotile-panel',
+    title: 'Thermotile Insulation Panel',
+    shortDescription: 'High-performance thermal insulation panel for commercial buildings and terrace slabs.',
+    image: 'Thermotile Insulation Panel.png',
+    pageUrl: '../products/thermotile-panel.html'
+  },
+  {
+    id: 'ancillary-products',
+    title: 'Other Ancillary Products',
+    shortDescription: 'Polycarbonate sheets, turbo ventilators, insulation slabs, tapes, ducts, and adhesives for industrial and commercial use.',
+    image: 'Ancillary Products.png',
+    pageUrl: '../products/ancillary-products.html'
   }
 ];
 
