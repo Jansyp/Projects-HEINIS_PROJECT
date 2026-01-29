@@ -281,21 +281,13 @@ function createProductTile(product) {
 
   let imageHtml = '';
   if (product.id === 'xlpe-foam') {
-    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;background:#f7f7f7;'>
-      <img src='images/XLPE-SHEETS.png' alt='XLPE Sheets & Tubes Insulation' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block;margin:0;padding:0;'>
-    </div>`;
+    imageHtml = `<img src='images/XLPE-SHEETS.png' alt='XLPE Sheets & Tubes Insulation' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
   } else if (product.id === 'nitrile-rubber') {
-    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;background:#f7f7f7;'>
-      <img src='images/NBR SHEETS.png' alt='Nitrile Rubber Sheets & Tubes' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block;margin:0;padding:0;'>
-    </div>`;
+    imageHtml = `<img src='images/NBR SHEETS.png' alt='Nitrile Rubber Sheets & Tubes' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
   } else if (product.id === 'fiberglass') {
-    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;background:#f7f7f7;'>
-      <img src='images/fiberglass-wool.png' alt='Fiber Glasswool' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block;margin:0;padding:0;'>
-    </div>`;
+    imageHtml = `<img src='images/fiberglass-wool.png' alt='Fiber Glasswool' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
   } else if (product.id === 'industrial-fans') {
-    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;background:#f7f7f7;'>
-      <img src='images/Industrial-Fans.jfif' alt='Industrial Fans' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block;margin:0;padding:0;'>
-    </div>`;
+    imageHtml = `<img src='images/Industrial-Fans.jfif' alt='Industrial Fans' style='max-width:90%;max-height:90%;object-fit:contain;'>`;
   } else {
     imageHtml = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="width:140px;height:140px;opacity:0.3;">
       <rect width="200" height="200" fill="none"/>
