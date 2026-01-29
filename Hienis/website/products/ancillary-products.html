@@ -7,12 +7,73 @@
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .product-detail-hero {background: linear-gradient(120deg,#667bc6,#9aa5ce); color: #222; padding: 48px 24px; text-align:center;}
-    .product-detail-hero img {max-width:220px; background:transparent; border-radius:10px; box-shadow:0 4px 24px #667bc61a; margin-bottom:18px;}
-    .product-detail-main {max-width:800px; margin:32px auto; background:#fff; border-radius:14px; box-shadow:0 4px 24px #667bc61a; padding:2rem;}
-    .product-detail-main h2 {color:#667bc6; margin-top:0;}
+    .product-detail-hero {background: linear-gradient(120deg,#0f8b43,#1f6e3a); color: #fff; padding: 52px 24px; text-align:center;}
+    .product-detail-hero img {max-width:220px; background:transparent; border-radius:12px; box-shadow:0 6px 28px #0f8b4330; margin-bottom:18px;}
+    .product-detail-main {max-width:980px; margin:32px auto; background:#fff; border-radius:16px; box-shadow:0 6px 28px #0f8b4314; padding:2rem;}
+    .product-detail-main h2 {color:#0f8b43; margin-top:0;}
     .product-detail-main ul {margin-left:20px;}
-    .back-link {display:inline-block; margin-bottom:18px; color:#667bc6; text-decoration:underline;}
+    .back-link {display:inline-block; margin-bottom:18px; color:#0f8b43; text-decoration:underline;}
+
+    .ancillary-section {
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items:center;
+      padding: 24px;
+      margin: 24px 0;
+      background: #f7fbf8;
+      border: 1px solid #e2efe7;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(7, 75, 36, 0.08);
+    }
+    .ancillary-section.reverse .ancillary-media {order: 1;}
+    .ancillary-section.reverse .ancillary-content {order: 2;}
+    .ancillary-media {
+      background: linear-gradient(135deg, #eaf6ef, #f9fbfa);
+      border: 1px solid #dbe9e0;
+      border-radius: 14px;
+      padding: 16px;
+      min-height: 220px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .ancillary-media img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 18px rgba(5, 62, 30, 0.18));
+    }
+    .ancillary-grid {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .ancillary-card {
+      background:#fff;
+      border:1px solid #e4efe8;
+      border-radius:14px;
+      padding: 16px;
+      text-align:center;
+      box-shadow: 0 8px 18px rgba(10, 87, 44, 0.08);
+    }
+    .ancillary-card img {
+      width: 100%;
+      max-width: 140px;
+      height: auto;
+      margin: 0 auto 12px;
+      display:block;
+    }
+    .ancillary-card h3 {margin: 0 0 6px; color:#0f8b43; font-size: 1rem;}
+    .ancillary-card p {margin:0; font-size:0.9rem; color:#566158;}
+
+    @media(max-width:900px){
+      .ancillary-section {grid-template-columns: 1fr;}
+      .ancillary-section.reverse .ancillary-media {order: 2;}
+      .ancillary-section.reverse .ancillary-content {order: 1;}
+    }
     @media(max-width:700px){.product-detail-main{padding:1rem;}}
   </style>
 </head>
@@ -50,48 +111,128 @@
     <a href="index.html" class="back-link">&larr; Back to Products</a>
     <h2>Comprehensive Ancillary Products</h2>
     <p>In addition to our primary insulation products, we offer a comprehensive range of complementary products designed to support and enhance thermal and acoustic insulation systems in various industrial and commercial applications.</p>
-    
-    <h2>Polycarbonate / Multiwall Sheets</h2>
-    <p>Strong, lightweight, and transparent plastic sheets with a hollow multi-layer structure. They allow natural light to pass through while blocking heat and UV rays.</p>
-    <ul>
-      <li>Roofing for skylights, sheds, and factories</li>
-      <li>Canopies and awnings for homes, shops, and walkways</li>
-      <li>Greenhouses for farming and nurseries</li>
-      <li>Building facades and wall cladding</li>
-      <li>Pergolas and outdoor shelters</li>
-    </ul>
 
-    <h2>Turbo Ventilators</h2>
-    <p>Wind-driven, roof-mounted ventilators that use centrifugal force to expel hot, stale air from inside buildings without electricity. Rotates even with a light breeze for continuous ventilation.</p>
-    <ul>
-      <li>Industrial sheds and factories</li>
-      <li>Warehouses and workshops</li>
-      <li>Commercial buildings</li>
-      <li>Reduces heat and humidity effectively</li>
-    </ul>
+    <div class="ancillary-section">
+      <div class="ancillary-content">
+        <h2>Polycarbonate / Multiwall Sheets</h2>
+        <p>Strong, lightweight, and transparent plastic sheets with a hollow multi-layer structure. They allow natural light to pass through while blocking heat and UV rays.</p>
+        <ul>
+          <li>Roofing for skylights, sheds, and factories</li>
+          <li>Canopies and awnings for homes, shops, and walkways</li>
+          <li>Greenhouses for farming and nurseries</li>
+          <li>Building facades and wall cladding</li>
+          <li>Pergolas and outdoor shelters</li>
+        </ul>
+      </div>
+      <div class="ancillary-media">
+        <img src="images/ancillary/polycarbonate.png" alt="Polycarbonate multiwall sheets">
+      </div>
+    </div>
 
-    <h2>XPS, EPS & PUF Slabs / Pipe Sections</h2>
-    <p>Rigid thermal insulation materials with low thermal conductivity, high compressive strength, and moisture resistance. Used for thermal insulation in chilled water pipelines, ducts, roofs, walls, and industrial equipment.</p>
+    <div class="ancillary-section reverse">
+      <div class="ancillary-content">
+        <h2>Turbo Ventilators</h2>
+        <p>Wind-driven, roof-mounted ventilators that use centrifugal force to expel hot, stale air from inside buildings without electricity. Rotates even with a light breeze for continuous ventilation.</p>
+        <ul>
+          <li>Industrial sheds and factories</li>
+          <li>Warehouses and workshops</li>
+          <li>Commercial buildings</li>
+          <li>Reduces heat and humidity effectively</li>
+        </ul>
+      </div>
+      <div class="ancillary-media">
+        <img src="images/ancillary/turbo-ventilator.png" alt="Turbo ventilator">
+      </div>
+    </div>
 
-    <h2>Insulation Tapes</h2>
-    <ul>
-      <li>Aluminium Tapes - For reflective and weather-resistant applications</li>
-      <li>Nitrile Tapes - For sealing and vibration isolation</li>
-      <li>XLPE Tapes - For thermal insulation applications</li>
-      <li>FRP Tapes - For reinforcement and structural support</li>
-      <li>Duct Tapes - For flexible duct sealing and joining</li>
-      <li>Non-Adhesive Tapes - For flexible insulation wrapping</li>
-    </ul>
+    <div class="ancillary-section">
+      <div class="ancillary-content">
+        <h2>XPS, EPS & PUF Slabs / Pipe Sections</h2>
+        <p>Rigid thermal insulation materials with low thermal conductivity, high compressive strength, and moisture resistance. Used for thermal insulation in chilled water pipelines, ducts, roofs, walls, and industrial equipment.</p>
+      </div>
+      <div class="ancillary-media">
+        <img src="images/ancillary/insulation-slabs.png" alt="XPS, EPS and PUF insulation slabs">
+      </div>
+    </div>
 
-    <h2>Flexible Ducts</h2>
-    <ul>
-      <li>Semi-metallic Ducts - For HVAC and ventilation systems</li>
-      <li>Pre-insulated Ducts - For energy-efficient air distribution</li>
-      <li>Uninsulated Ducts - For applications where insulation is applied separately</li>
-    </ul>
+    <div class="ancillary-section reverse">
+      <div class="ancillary-content">
+        <h2>Insulation Tapes</h2>
+        <p>Reliable tapes engineered for weather resistance, thermal performance, and strong adhesion in HVAC and insulation systems.</p>
+        <div class="ancillary-grid">
+          <div class="ancillary-card">
+            <img src="images/ancillary/tape-aluminium.png" alt="Aluminium Tapes">
+            <h3>Aluminium Tapes</h3>
+            <p>Reflective and weather-resistant sealing.</p>
+          </div>
+          <div class="ancillary-card">
+            <img src="images/ancillary/tape-nitrile.png" alt="Nitrile Tapes">
+            <h3>Nitrile Tapes</h3>
+            <p>Sealing and vibration isolation.</p>
+          </div>
+          <div class="ancillary-card">
+            <img src="images/ancillary/tape-xlpe.png" alt="XLPE Tapes">
+            <h3>XLPE Tapes</h3>
+            <p>Thermal insulation applications.</p>
+          </div>
+          <div class="ancillary-card">
+            <img src="images/ancillary/tape-frp.png" alt="FRP Tapes">
+            <h3>FRP Tapes</h3>
+            <p>Reinforcement and support.</p>
+          </div>
+          <div class="ancillary-card">
+            <img src="images/ancillary/tape-duct.png" alt="Duct Tapes">
+            <h3>Duct Tapes</h3>
+            <p>Flexible duct sealing and joining.</p>
+          </div>
+          <div class="ancillary-card">
+            <img src="images/ancillary/tape-non-adhesive.png" alt="Non-Adhesive Tapes">
+            <h3>Non-Adhesive Tapes</h3>
+            <p>Flexible insulation wrapping.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ancillary-media">
+        <img src="images/ancillary/tape-aluminium.png" alt="Insulation tapes">
+      </div>
+    </div>
 
-    <h2>Rubber Adhesive</h2>
-    <p>Synthetic rubber-based bonding agent known for quick drying, strong grip, and flexible hold on multiple surfaces. Used for fixing insulation sheets, rubber, foam, leather, wood, and metal in HVAC, construction, automotive, and general industrial applications.</p>
+    <div class="ancillary-section">
+      <div class="ancillary-content">
+        <h2>Flexible Ducts</h2>
+        <p>Durable, easy-to-install ducts designed for efficient air distribution and reliable HVAC performance.</p>
+        <div class="ancillary-grid">
+          <div class="ancillary-card">
+            <img src="images/ancillary/duct-semi-metallic.png" alt="Semi-metallic duct">
+            <h3>Semi-metallic Duct</h3>
+            <p>For HVAC and ventilation systems.</p>
+          </div>
+          <div class="ancillary-card">
+            <img src="images/ancillary/duct-pre-insulated.png" alt="Pre-insulated duct">
+            <h3>Pre-insulated Duct</h3>
+            <p>Energy-efficient air distribution.</p>
+          </div>
+          <div class="ancillary-card">
+            <img src="images/ancillary/duct-uninsulated.png" alt="Uninsulated duct">
+            <h3>Uninsulated Duct</h3>
+            <p>For insulation on site.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ancillary-media">
+        <img src="images/ancillary/duct-semi-metallic.png" alt="Flexible ducts">
+      </div>
+    </div>
+
+    <div class="ancillary-section reverse">
+      <div class="ancillary-content">
+        <h2>Rubber Adhesive</h2>
+        <p>Synthetic rubber-based bonding agent known for quick drying, strong grip, and flexible hold on multiple surfaces. Used for fixing insulation sheets, rubber, foam, leather, wood, and metal in HVAC, construction, automotive, and general industrial applications.</p>
+      </div>
+      <div class="ancillary-media">
+        <img src="images/ancillary/rubber-adhesive.png" alt="Rubber adhesive">
+      </div>
+    </div>
 
     <h2>Why Choose Our Ancillary Products?</h2>
     <ul>
