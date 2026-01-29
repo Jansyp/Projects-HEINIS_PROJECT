@@ -94,6 +94,7 @@ main {
 }
 .products.container {
   text-align: center;
+  background: transparent !important;
 }
 .products.container h2 {
   margin-left: auto;
@@ -115,6 +116,7 @@ main {
   min-height: 54px;
   max-height: 54px;
   margin-bottom: 22px;
+  background: transparent !important;
 }
 
 .product-slider-container {
@@ -169,18 +171,21 @@ main {
   min-width: 380px;
   max-width: 400px;
   flex: 0 0 400px;
+  
 }
 .product-card:hover {
   transform: scale(1.06) translateY(-8px);
   box-shadow: 0 8px 32px rgba(30,60,90,0.13);
   z-index: 1;
+  background: transparent !important;
 }
 .product-card img {
   width: 100%;
   max-width: 180px;
   margin-bottom: 18px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: none !important;           /* ⬅ removes shadow */
+  border-radius: 0 !important;
+  background: transparent !important;
 }
 /* --- 3D Slider Global Styles --- */
 .slider-container {

@@ -6,14 +6,14 @@ const productsData = [
     id: 'nitrile-rubber',
     title: 'Nitrile Rubber - Sheets and Tubes',
     shortDescription: 'High-quality NBR sheets and tubes for industrial sealing applications',
-    image: 'NBR SHEETS.jpeg',
+    image: 'NBR SHEETS.png',
     pageUrl: '../products/nbr-sheets-tubes.html'
   },
   {
     id: 'xlpe-foam',
     title: 'XLPE Foam - Sheets and Tubes',
     shortDescription: 'High-performance closed-cell thermal insulation for HVAC, plumbing, and cleanroom applications.',
-    image: 'XLPE-SHEETS.jpeg',
+    image: 'XLPE-SHEETS.png',
     pageUrl: '../products/xlpe-sheets-tubes.html'
   },
   {
@@ -41,7 +41,7 @@ const productsData = [
     id: 'industrial-fans',
     title: 'Industrial Fans',
     shortDescription: 'High-performance fans for ventilation, cooling, and air circulation in industrial and commercial environments.',
-    image: 'axial-fan.png',
+    image: 'Industrial-Fans.jfif',
     pageUrl: '../products/industrial-fans.html'
   },
   {

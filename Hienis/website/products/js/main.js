@@ -49,7 +49,8 @@ const productsData = [
     id: 'fiberglass',
     title: 'Fiber Glasswool',
     shortDescription: 'Lightweight insulation material for high-temperature applications',
-    fullDescription: 'High-performance fiberglass wool insulation suitable for temperatures up to 250°C. Used extensively in industrial furnaces and thermal systems.',
+    fullDescription: `<img src='images/fiberglass-wool.png' alt='Fiber Glasswool' style='max-width:100%;margin-bottom:18px;'>
+      High-performance fiberglass wool insulation suitable for temperatures up to 250°C. Used extensively in industrial furnaces and thermal systems.`,
     pageUrl: 'fiberglass-wool.html'
   },
   {
@@ -280,12 +281,20 @@ function createProductTile(product) {
 
   let imageHtml = '';
   if (product.id === 'xlpe-foam') {
-    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;'>
-      <img src='images/XLPE-SHEETS.jpeg' alt='XLPE Sheets & Tubes Insulation' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;padding:0;'>
+    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;background:#f7f7f7;'>
+      <img src='images/XLPE-SHEETS.png' alt='XLPE Sheets & Tubes Insulation' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block;margin:0;padding:0;'>
     </div>`;
   } else if (product.id === 'nitrile-rubber') {
-    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;'>
-      <img src='images/NBR SHEETS.jpeg' alt='Nitrile Rubber Sheets & Tubes' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;padding:0;'>
+    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;background:#f7f7f7;'>
+      <img src='images/NBR SHEETS.png' alt='Nitrile Rubber Sheets & Tubes' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block;margin:0;padding:0;'>
+    </div>`;
+  } else if (product.id === 'fiberglass') {
+    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;background:#f7f7f7;'>
+      <img src='images/fiberglass-wool.png' alt='Fiber Glasswool' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block;margin:0;padding:0;'>
+    </div>`;
+  } else if (product.id === 'industrial-fans') {
+    imageHtml = `<div style='position:relative;width:100%;height:140px;overflow:hidden;margin:0;background:#f7f7f7;'>
+      <img src='images/Industrial-Fans.jfif' alt='Industrial Fans' style='position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;display:block;margin:0;padding:0;'>
     </div>`;
   } else {
     imageHtml = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="width:140px;height:140px;opacity:0.3;">

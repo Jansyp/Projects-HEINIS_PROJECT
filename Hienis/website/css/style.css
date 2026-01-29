@@ -84,7 +84,7 @@
 
 /* Modern Global Footer Styles */
 .site-footer {
-	background-image: url('../images/backgroundTile.jpeg');
+	background-image: url('/website/images/BackgroundTile.jpeg');
 	background-color: #333;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -215,7 +215,7 @@
 
 /* Hero background and CTA styles */
 .hero{
-	background-image: url("../images/BackgroundTile.jpeg");
+	background-image: url("/website/images/BackgroundTile.jpeg");
 	background-size: cover;
 	background-position: center;
 	color: #fff;
