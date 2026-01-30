@@ -706,8 +706,10 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     z-index: 10001;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   }
 
   #site-nav.open {

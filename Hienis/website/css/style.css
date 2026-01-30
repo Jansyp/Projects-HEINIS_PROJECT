@@ -51,11 +51,12 @@
 	   display: flex !important;
 	   flex-direction: column;
 	   gap: 1.2rem;
-	   background: transparent !important;
+	   background: rgba(255, 255, 255, 0.7) !important;
+	   backdrop-filter: blur(10px) !important;
 	   width: 100vw;
 	   padding: 1.5rem 0;
 	   margin: 0;
-	   box-shadow: none;
+	   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
    }
 }
 /* Ensure contact number in navbar is visible on black background */
@@ -1015,11 +1016,12 @@ body{padding-top:72px}
 	    display: flex !important;
 	    flex-direction: column;
 	    gap: 1.2rem;
-	    background: #111;
+	    background: rgba(255, 255, 255, 0.7);
+	    backdrop-filter: blur(10px);
 	    width: 100vw;
 	    padding: 1.5rem 0;
 	    margin: 0;
-	    box-shadow: none;
+	    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 	  }
 	}
 
