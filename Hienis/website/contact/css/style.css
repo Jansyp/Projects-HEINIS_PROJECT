@@ -16,6 +16,12 @@
   color: #111 !important;
   fill: #111 !important;
 }
+/* Menu link hover effect */
+.site-header.stylish-navbar .stylish-menu .stylish-link:hover,
+.site-header.stylish-navbar .stylish-menu .stylish-link:focus {
+  color: #ffc107 !important;
+  background: #222 !important;
+}
 /* Modern Contact Us Redesign */
 .contact-modern-wrapper {
   max-width: 1100px;

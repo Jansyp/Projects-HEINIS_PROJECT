@@ -1,22 +1,8 @@
 <!-- Global Stylish Navbar Include -->
-<style>
-  .stylish-navbar {
-    background: #fff !important;
-    box-shadow: 0 2px 12px rgba(11,92,255,0.08);
-  }
-  .stylish-link {
-    color: #4b2fcf !important;
-    font-weight: 700;
-  }
-  .stylish-link:hover, .stylish-link:focus {
-    color: #f357a8 !important;
-    background: #f7f6ff !important;
-  }
-</style>
 <header class="site-header stylish-navbar">
   <div class="container stylish-navbar-container">
-    <a class="logo stylish-logo" href="../home/index.html">
-      <img src="../../Hienis/website/images/logo.png" alt="HIENIS logo" class="site-logo stylish-logo-img" />
+    <a class="logo stylish-logo" data-href="home/index.html">
+      <img data-src="images/logo.png" alt="HIENIS logo" class="site-logo stylish-logo-img" />
     </a>
     <!-- Hamburger menu button for mobile, placed outside logo link -->
     <button id="nav-toggle" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false" style="background:none;border:none;outline:none;cursor:pointer;padding:8px 10px;margin-left:8px;">
@@ -27,13 +13,12 @@
         <rect y="17" width="24" height="3" rx="1.5" fill="#ff9800"/>
       </svg>
     </button>
-    </a>
     <nav id="site-nav" class="site-nav stylish-nav">
       <ul class="stylish-menu">
-        <li><a href="../home/index.html" class="stylish-link">Home</a></li>
-        <li><a href="../about/index.html" class="stylish-link">About</a></li>
-        <li><a href="../products/index.html" class="stylish-link">Products</a></li>
-        <li><a href="../contact/index.html" class="stylish-link">Contact</a></li>
+        <li><a data-href="home/index.html" class="stylish-link">Home</a></li>
+        <li><a data-href="about/index.html" class="stylish-link">About</a></li>
+        <li><a data-href="products/index.html" class="stylish-link">Products</a></li>
+        <li><a data-href="contact/index.html" class="stylish-link">Contact</a></li>
       </ul>
     </nav>
     <a class="header-contact stylish-contact" href="https://wa.me/919444038255" target="_blank" rel="noopener">

@@ -18,6 +18,14 @@
 	   fill: #111 !important;
 	   transition: fill 0.2s;
    }
+   #nav-toggle:hover {
+	   background: #000 !important;
+	   color: #ffc107 !important;
+	   border: 1.5px solid #000 !important;
+   }
+   #nav-toggle:hover svg rect {
+	   fill: #ffc107 !important;
+   }
    #nav-toggle:active, #nav-toggle.open, #nav-toggle[aria-expanded="true"] {
 	   background: #fff !important;
 	   color: #111 !important;
