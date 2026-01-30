@@ -62,18 +62,107 @@
 .stylish-contact-text, .stylish-contact-text .contact-note, .stylish-contact-text .contact-phone {
 	color: #fff !important;
 }
-/* Stylish Navbar Global Styles */
+/* Premium Stylish Navbar Styles */
 .stylish-navbar {
-	background: #111 !important;
-	box-shadow: 0 2px 12px rgba(11,92,255,0.08);
+	background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.3), 0 0 40px rgba(255,193,68,0.1);
+	position: relative;
+	backdrop-filter: blur(10px);
+	border-bottom: 2px solid rgba(255,193,68,0.2);
 }
+
+.stylish-navbar::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #ffc144, #4ecdc4, transparent);
+	animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+	0%, 100% { opacity: 0.5; transform: translateX(-100%); }
+	50% { opacity: 1; transform: translateX(100%); }
+}
+
+.stylish-navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.6rem 1.5rem !important;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.stylish-logo {
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.stylish-logo:hover {
+	transform: scale(1.05);
+	filter: drop-shadow(0 0 20px rgba(255,193,68,0.6));
+}
+
+.stylish-logo-img {
+	height: 45px;
+	width: auto;
+}
+
+.stylish-nav ul {
+	display: flex;
+	gap: 0.5rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 .stylish-link {
 	color: #fff !important;
-	font-weight: 700;
+	font-weight: 600;
+	font-size: 0.95rem;
+	padding: 0.6rem 1.2rem;
+	text-decoration: none;
+	border-radius: 8px;
+	position: relative;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	letter-spacing: 0.5px;
 }
+
 .stylish-link:hover, .stylish-link:focus {
-	color: #ffe600 !important;
+	color: #ffc107 !important;
 	background: #222 !important;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(255,193,68,0.3), 0 0 20px rgba(255,193,68,0.2);
+}
+
+.stylish-contact {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	background: linear-gradient(135deg, rgba(10,127,45,0.9), rgba(14,138,63,0.9));
+	padding: 0.6rem 1.2rem;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(10,127,45,0.3);
+	border: 2px solid rgba(255,255,255,0.1);
+}
+
+.stylish-contact:hover {
+	transform: translateY(-3px) scale(1.05);
+	box-shadow: 0 6px 25px rgba(10,127,45,0.5);
+	background: linear-gradient(135deg, rgba(10,127,45,1), rgba(14,138,63,1));
+	border-color: rgba(255,193,68,0.5);
+}
+
+.stylish-contact svg {
+	transition: transform 0.3s ease;
+}
+
+.stylish-contact:hover svg {
+	transform: rotate(360deg) scale(1.1);
 }
 /* Root stylesheet cleared — per-page styles live in each page folder. */
 /* If you need a shared global stylesheet, add it here. */

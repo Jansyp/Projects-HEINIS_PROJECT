@@ -183,15 +183,15 @@ body{font-family: system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial
 .commitment {
   background: linear-gradient(120deg, #f357a8 0%, #7b2ff2 100%);
   color: #fff;
-  padding: 3rem 0 2.2rem 0;
+  padding: 1.5rem 0 1.2rem 0;
   margin-top: 1.5rem;
   border-radius: 18px;
   box-shadow: 0 4px 24px #7b2ff21a;
 }
 .commitment h2 {
   text-align: center;
-  font-size: 1.45rem;
-  letter-spacing: 1.2px;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
   font-weight: 700;
   color: #fff;
   text-shadow: 0 2px 8px #7b2ff255;
