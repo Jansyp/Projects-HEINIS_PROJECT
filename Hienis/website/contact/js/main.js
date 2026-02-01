@@ -41,7 +41,7 @@
       var fullMessage = 'Name: ' + visitorName + '\nEmail: ' + visitorEmail + '\nMessage: ' + visitorMessage;
       
       // WhatsApp number without + symbol (country code 91 for India, then the number)
-      var phoneNumber = '917358477567';
+      var phoneNumber = '919444038255';
       
       // Create WhatsApp link
       var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(fullMessage);
