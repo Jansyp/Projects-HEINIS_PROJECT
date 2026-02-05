@@ -32,6 +32,37 @@
       </div>
     <script src="js/carousel-drag.js"></script>
     </section>
+    <!-- Experience/Counter Section -->
+    <section id="experience-section" style="background:linear-gradient(90deg,#f8fbff 60%,#fff6e9 100%);padding:3.5rem 0 2.5rem 0;margin-bottom:2.5rem;">
+      <div style="max-width:1400px;margin:0 auto;padding:0 2vw;">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2.5rem;">
+          <div style="flex:1 1 420px;min-width:320px;max-width:600px;">
+            <h2 style="font-size:2.5rem;font-weight:700;color:#2176bb;margin-bottom:1.2rem;">We have <span style="color:#1766a6;">15 years</span> of experience</h2>
+            <p style="font-size:1.15rem;color:#555;max-width:500px;">Get the highest quality IT services from the best tech provider in Chennai</p>
+          </div>
+          <div style="flex:2 1 600px;min-width:320px;max-width:800px;display:flex;gap:2.5rem;justify-content:space-evenly;">
+            <div class="counter-box" style="text-align:center;">
+              <div style="font-size:3rem;font-weight:800;color:#2176bb;line-height:1;">
+                <span class="counter" data-target="500">0</span><span>+</span>
+              </div>
+              <div style="font-size:1.2rem;color:#222;font-weight:600;">Projects</div>
+            </div>
+            <div class="counter-box" style="text-align:center;">
+              <div style="font-size:3rem;font-weight:800;color:#2176bb;line-height:1;">
+                <span class="counter" data-target="100">0</span><span>+</span>
+              </div>
+              <div style="font-size:1.2rem;color:#222;font-weight:600;">Clients</div>
+            </div>
+            <div class="counter-box" style="text-align:center;">
+              <div style="font-size:3rem;font-weight:800;color:#2176bb;line-height:1;">
+                <span class="counter" data-target="30">0</span><span>+</span>
+              </div>
+              <div style="font-size:1.2rem;color:#222;font-weight:600;">Technologies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- About Section (Reference Style) -->
     <section class="about-hero-section" style="background:#fff;padding:3.5rem 0 2.5rem 0;margin-bottom:2.5rem;">
@@ -43,7 +74,7 @@
         </div>
         <div class="about-hero-right" style="flex:1 1 480px;min-width:320px;max-width:700px;display:flex;flex-direction:column;justify-content:flex-start;">
           <div class="about-hero-desc" style="font-size:1.25rem;color:#7a7a7a;margin-bottom:2.2rem;line-height:1.6;">
-            <span style="font-size:1.2rem;font-weight:600;color:#888;letter-spacing:0.04em;">HIENIS ENGINEERING & INSULATION PRODUCTS</span>, specializes in industrial insulation and energy-saving solutions. We serve and cater to the needs of HVAC, Cleanrooms, Pharma, Food, Cold Storage, Commercial, and Industrial sectors.
+            <span style="font-size:1.2rem;font-weight:600;color:#888;letter-spacing:0.04em;">Hitech Energy Insulations</span>, specializes in industrial insulation and energy-saving solutions. We serve and cater to the needs of HVAC, PEB, Pharma, Cold Storage, and accouistic insulation.
           </div>
           <a href="../about/index.html" class="about-hero-link" style="font-size:1.1rem;font-weight:700;color:#222;text-decoration:none;border-bottom:3px solid #eee;padding-bottom:2px;transition:color 0.2s,border-color 0.2s;width:fit-content;">LEARN ABOUT US &rarr;</a>
         </div>
@@ -125,10 +156,10 @@
         </div>
         <button class="product-slider-arrow right" id="productSliderNext">&#8250;</button>
       </div>
-      <script src="../../js/productsData.js"></script>
+      <script src="../js/productsData.js"></script>
       <script>
         // Fallback for GitHub Pages if productsData.js fails to load
-        var productsScript = document.querySelector('script[src="../../js/productsData.js"]');
+        var productsScript = document.querySelector('script[src="../js/productsData.js"]');
         productsScript.onerror = function() {
           var altScript = document.createElement('script');
           altScript.src = '/Projects-HEINIS_PROJECT/Hienis/js/productsData.js';
@@ -136,7 +167,6 @@
         };
       </script>
       </div>
-      <script src="js/main.js"></script>
     </section>
   </main>
 
@@ -149,6 +179,7 @@
         document.getElementById('global-footer').innerHTML = html;
       });
   </script>
+  <script src="js/main.js"></script>
   <script src="../js/global-navbar.js"></script>
 </body>
 </html>
