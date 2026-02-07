@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/style.css?v=20260130-2" />
   <link rel="stylesheet" href="css/homeStyle.css?v=20260130-2" />
 </head>
-<body>
+<body id="top">
   <div id="global-navbar"></div>
 
   <main>
@@ -38,7 +38,7 @@
         <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2.5rem;">
           <div style="flex:1 1 420px;min-width:320px;max-width:600px;">
             <h2 style="font-size:2.5rem;font-weight:700;color:#2176bb;margin-bottom:1.2rem;">We have <span style="color:#1766a6;">15 years</span> of experience</h2>
-            <p style="font-size:1.15rem;color:#555;max-width:500px;">Get the highest quality IT services from the best tech provider in Chennai</p>
+            <!-- <p style="font-size:1.15rem;color:#555;max-width:500px;">Get the highest quality IT services from the best tech provider in Chennai</p> -->
           </div>
           <div style="flex:2 1 600px;min-width:320px;max-width:800px;display:flex;gap:2.5rem;justify-content:space-evenly;">
             <div class="counter-box" style="text-align:center;">
@@ -168,6 +168,35 @@
       </script>
       </div>
     </section>
+
+    <section class="partners-section">
+      <div class="partners-inner">
+        <h2>In Partnership With Global Leaders</h2>
+        <p>
+          We are proud to represent and distribute products from some of the most trusted names in the HVAC industry,
+          ensuring unmatched quality and efficiency.
+        </p>
+        <div class="partners-marquee" aria-label="Partner logos">
+          <div class="partners-track">
+            <div class="partner-logo">Aerofoam</div>
+            <div class="partner-logo">Fuji Electric</div>
+            <div class="partner-logo">Honeywell</div>
+            <div class="partner-logo">Kruger</div>
+            <div class="partner-logo">KPT Pipes</div>
+            <div class="partner-logo">Kingspan</div>
+            <div class="partner-logo">Armstrong</div>
+
+            <div class="partner-logo">Aerofoam</div>
+            <div class="partner-logo">Fuji Electric</div>
+            <div class="partner-logo">Honeywell</div>
+            <div class="partner-logo">Kruger</div>
+            <div class="partner-logo">KPT Pipes</div>
+            <div class="partner-logo">Kingspan</div>
+            <div class="partner-logo">Armstrong</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Global Footer Include -->
@@ -177,12 +206,16 @@
       .then(response => response.text())
       .then(html => {
         document.getElementById('global-footer').innerHTML = html;
+        var backToTop = document.querySelector('#global-footer .footer-backtotop');
+        if (backToTop) {
+          backToTop.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
       });
   </script>
   <script src="js/main.js"></script>
   <script src="../js/global-navbar.js"></script>
 </body>
 </html>
-
-
-<script>

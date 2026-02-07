@@ -39,3 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(experienceSection);
 });
+
+document.addEventListener("click", (event) => {
+  const backToTop = event.target.closest(".footer-backtotop");
+  if (!backToTop) return;
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+});
