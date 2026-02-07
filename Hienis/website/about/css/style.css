@@ -156,6 +156,265 @@ body{font-family: system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial
   color: #fbefff;
 }
 
+/* Vision & Mission */
+.vision-mission {
+  padding: 3rem 0 2.5rem 0;
+  background: linear-gradient(180deg, #f9f6ff 0%, #ffffff 100%);
+  text-align: center;
+}
+.vision-mission .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.vision-mission h2 {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.5px;
+}
+.vision-mission[data-animate="section"] h2,
+.vision-mission[data-animate="section"] .vm-grid,
+.leadership-section[data-animate="section"] h2,
+.leadership-section[data-animate="section"] .leadership-subtitle,
+.leadership-section[data-animate="section"] .leadership-grid {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.vision-mission.in-view h2,
+.vision-mission.in-view .vm-grid,
+.leadership-section.in-view h2,
+.leadership-section.in-view .leadership-subtitle,
+.leadership-section.in-view .leadership-grid {
+  opacity: 1;
+  transform: translateY(0);
+}
+.vm-card[data-animate="card"],
+.leader-card[data-animate="card"] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.vm-card.in-view,
+.leader-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.vm-card.in-view {
+  transition-delay: 0.1s;
+}
+.leader-card.in-view {
+  transition-delay: 0.1s;
+}
+.vm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+.vm-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.8rem 1.6rem;
+  box-shadow: 0 14px 40px rgba(123, 47, 242, 0.12);
+  border: 1px solid rgba(123, 47, 242, 0.15);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vm-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(123, 47, 242, 0.06), rgba(243, 87, 168, 0.08));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.vm-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(123, 47, 242, 0.2);
+}
+.vm-card:hover::before {
+  opacity: 1;
+}
+.vm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--about-gradient);
+  box-shadow: 0 8px 20px rgba(123, 47, 242, 0.3);
+  margin-bottom: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+.vm-card h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.8rem 0;
+  color: #2d1a4a;
+  position: relative;
+  z-index: 1;
+}
+.vm-card p {
+  margin: 0;
+  color: #5c4a78;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* Leadership section */
+.leadership-section {
+  padding: 3rem 0 2.5rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f4f1ff 100%);
+  text-align: center;
+}
+.leadership-section h2 {
+  font-size: 2.2rem;
+  color: #5a3a86;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.4px;
+}
+.leadership-subtitle {
+  font-size: 1.12rem;
+  color: #6f5c8f;
+  margin: 0 auto 2rem auto;
+  max-width: 780px;
+}
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+.leader-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem 1.8rem;
+  text-align: left;
+  box-shadow: 0 18px 45px rgba(90, 58, 134, 0.12);
+  border: 1px solid rgba(123, 47, 242, 0.12);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.leader-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(123, 47, 242, 0.08), rgba(243, 87, 168, 0.08));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.leader-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(90, 58, 134, 0.18);
+}
+.leader-card:hover::before {
+  opacity: 1;
+}
+.leader-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  background: var(--about-gradient);
+  box-shadow: 0 8px 20px rgba(123, 47, 242, 0.28);
+  margin-bottom: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+.leader-card h3 {
+  font-size: 1.35rem;
+  margin: 0 0 0.6rem 0;
+  color: #2d1a4a;
+  position: relative;
+  z-index: 1;
+}
+.leader-note {
+  margin: 0 0 1rem 0;
+  color: #6c5a86;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+.leader-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #5c4a78;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+.leader-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Why Choose Us */
+.why-choose {
+  padding: 3rem 0 2.5rem 0;
+  background: #ffffff;
+  text-align: center;
+}
+.why-choose h2 {
+  font-size: 2.2rem;
+  color: #0b5cff;
+  margin-bottom: 2rem;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 1.6rem;
+}
+.why-card {
+  background: #f6f7fb;
+  border-radius: 16px;
+  padding: 2.2rem 1.6rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border-bottom: 4px solid #0b5cff;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.why-card:hover {
+  background: #0b5cff;
+  border-bottom-color: #0a4bd6;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(11, 92, 255, 0.25);
+}
+.why-card:hover h3,
+.why-card:hover p {
+  color: #fff;
+}
+.why-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  color: #1f2937;
+}
+.why-card p {
+  margin: 0;
+  color: #5b6472;
+  line-height: 1.7;
+}
+.why-card.featured {
+  background: #5b6f96;
+  color: #fff;
+  border-bottom-color: #0b5cff;
+}
+.why-card.featured h3,
+.why-card.featured p {
+  color: #fff;
+}
+
 /* Two-column blocks for company info */
 .two-col {
   display: flex;
@@ -183,8 +442,9 @@ body{font-family: system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial
 .commitment {
   background: linear-gradient(120deg, #f357a8 0%, #7b2ff2 100%);
   color: #fff;
-  padding: 0.75rem 0 0.6rem 0;
-  margin-top: 1.5rem;
+  padding: 0.4rem 0 0.35rem 0;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
   border-radius: 18px;
   box-shadow: 0 4px 24px #7b2ff21a;
 }
@@ -261,6 +521,15 @@ body{font-family: system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial
   .tech-card {
     padding: 1.2rem 1rem;
   }
+  .vm-grid {
+    grid-template-columns: 1fr;
+  }
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* State of the art section - modern aligned layout */
@@ -282,7 +551,7 @@ body{font-family: system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial
 .two-col{display:flex;gap:2rem;padding:2.5rem 0;flex-wrap:wrap}
 .two-col .col{flex:1 1 320px;background:var(--card-bg);padding:1.25rem;border-radius:12px;box-shadow:var(--shadow)}
 
-.commitment{background:linear-gradient(180deg,#1db64b,#0ea03b);color:#fff;padding:3rem 0;margin-top:1.5rem;border-radius:8px}
+.commitment{background:linear-gradient(180deg,#1db64b,#0ea03b);color:#fff;padding:0.9rem 0;margin-top:0.2rem;margin-bottom:0;border-radius:8px}
 .commitment h2{text-align:center;font-size:1.25rem;letter-spacing:1px}
 
 .intro{padding:2rem 0}

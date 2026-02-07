@@ -34,6 +34,79 @@
       </div>
     </section>
 
+    <section class="vision-mission" data-animate="section">
+      <div class="container">
+        <h2>Our Vision &amp; Mission</h2>
+        <div class="vm-grid">
+          <article class="vm-card" data-animate="card">
+            <div class="vm-badge">Vision</div>
+            <h3>Build a more energy‑efficient future</h3>
+            <p>To lead the insulation industry with innovative, sustainable solutions that improve energy performance and comfort across industrial and building environments.</p>
+          </article>
+          <article class="vm-card" data-animate="card">
+            <div class="vm-badge">Mission</div>
+            <h3>Deliver reliability from design to execution</h3>
+            <p>To provide high‑quality materials and turnkey insulation services with speed, precision, and long‑term value for every client.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="leadership-section" data-animate="section">
+      <div class="container">
+        <h2>Meet Our Leadership</h2>
+        <p class="leadership-subtitle">
+          A focused team driving smart insulation, reliable execution, and long‑term partnerships.
+        </p>
+        <div class="leadership-grid">
+          <article class="leader-card" data-animate="card">
+            <div class="leader-tag">Managing Partner</div>
+            <h3>Ashokkumar Subramanian</h3>
+            <p class="leader-note">Engineering‑first leadership with a client‑centric mindset.</p>
+            <ul>
+              <li>B.E. (Mechanical), M.B.A. (Marketing)</li>
+              <li>20+ years in HVAC and insulation solutions</li>
+              <li>Strong relationships with consultants and project teams</li>
+            </ul>
+          </article>
+          <article class="leader-card" data-animate="card">
+            <div class="leader-tag">Managing Partner</div>
+            <h3>Siva G</h3>
+            <p class="leader-note">Operations excellence with global sourcing expertise.</p>
+            <ul>
+              <li>B.E. (Electronics)</li>
+              <li>16+ years in HVAC supply and execution</li>
+              <li>Supplier partnerships across Asia</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose">
+      <div class="container">
+        <h2>Why Choose Us?</h2>
+        <div class="why-grid">
+          <article class="why-card">
+            <h3>Expertise You Can Trust</h3>
+            <p>15+ years of hands‑on experience in HVAC and industrial insulation.</p>
+          </article>
+          <article class="why-card featured">
+            <h3>Quality &amp; Reliability</h3>
+            <p>Consistent materials, proven processes, and on‑time delivery.</p>
+          </article>
+          <article class="why-card">
+            <h3>Comprehensive Services</h3>
+            <p>From design support to turnkey execution with end‑to‑end care.</p>
+          </article>
+          <article class="why-card">
+            <h3>Customer Satisfaction</h3>
+            <p>Transparent collaboration and dependable after‑service support.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="tech-products-section">
       <div class="tech-products-card">
         <h2 class="tech-products-heading">TECHNOLOGY &amp; PRODUCTS</h2>
@@ -126,6 +199,25 @@
         }
         window.addEventListener('scroll', onScroll);
         onScroll();
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var targets = document.querySelectorAll('[data-animate]');
+        if (!targets.length) return;
+
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        targets.forEach(function(el) {
+          observer.observe(el);
+        });
       });
     </script>
     </section>

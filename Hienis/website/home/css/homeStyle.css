@@ -123,6 +123,54 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+/* Core values */
+.core-values-section {
+  padding: 3rem 0 2.5rem 0;
+  background: transparent;
+}
+.core-values-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+.core-values-inner h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #3c6d5d;
+  margin-bottom: 2rem;
+}
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
+  gap: 1.6rem;
+  align-items: start;
+}
+.core-value-card {
+  background: transparent;
+  padding: 1.4rem 0.8rem;
+  border-radius: 16px;
+  box-shadow: none;
+  border: none;
+  backdrop-filter: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.core-icon {
+  font-size: 2.4rem;
+  color: #3c6d5d;
+  margin-bottom: 0.8rem;
+}
+.core-value-card h3 {
+  font-size: 1.05rem;
+  color: #111;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.core-value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: none;
+  border-color: transparent;
+}
 /* --- Product Slider Custom Styles (Restored) --- */
 .products-row {
   display: flex;
@@ -795,6 +843,9 @@ body {
   }
   .partner-logo {
     min-width: 150px;
+  }
+  .core-values-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
   }
 }
 /* ===== DESKTOP: INCREASE 3D CAROUSEL IMAGE HEIGHT ===== */
