@@ -19,26 +19,28 @@
       
       var nameInput = document.querySelector('input[name="name"]');
       var emailInput = document.querySelector('input[name="email"]');
+      var phoneInput = document.querySelector('input[name="phone"]');
       var messageInput = document.querySelector('textarea[name="message"]');
       
-      if (!nameInput || !emailInput || !messageInput) {
+      if (!nameInput || !emailInput || !phoneInput || !messageInput) {
         alert('Form fields not found');
         return;
       }
       
       var visitorName = nameInput.value.trim();
       var visitorEmail = emailInput.value.trim();
+      var visitorPhone = phoneInput.value.trim();
       var visitorMessage = messageInput.value.trim();
       
-      if (!visitorName || !visitorEmail || !visitorMessage) {
+      if (!visitorName || !visitorEmail || !visitorPhone || !visitorMessage) {
         alert('Please fill in all fields');
         return;
       }
       
-      console.log('Form values:', { visitorName, visitorEmail, visitorMessage });
+      console.log('Form values:', { visitorName, visitorEmail, visitorPhone, visitorMessage });
       
       // Build the message
-      var fullMessage = 'Name: ' + visitorName + '\nEmail: ' + visitorEmail + '\nMessage: ' + visitorMessage;
+      var fullMessage = 'Name: ' + visitorName + '\nEmail: ' + visitorEmail + '\nPhone: ' + visitorPhone + '\nMessage: ' + visitorMessage;
       
       // WhatsApp number without + symbol (country code 91 for India, then the number)
       var phoneNumber = '919444038255';
