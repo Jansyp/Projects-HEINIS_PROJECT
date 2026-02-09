@@ -171,6 +171,121 @@ main {
   box-shadow: none;
   border-color: transparent;
 }
+/* Sectors */
+.sectors-section {
+  padding: 3.5rem 0 3rem 0;
+  background: linear-gradient(180deg, #1f3b63 0%, #28466f 100%);
+  color: #fff;
+}
+.sectors-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+.sectors-inner h2 {
+  font-size: 2.6rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+.sectors-inner p {
+  max-width: 860px;
+  margin: 0 auto 2rem auto;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 0;
+}
+.sector-tile {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  color: #fff;
+  overflow: hidden;
+}
+.sector-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.sector-tile span {
+  position: relative;
+  z-index: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: transparent;
+  backdrop-filter: none;
+}
+.sector-tile.hospitality { background: url('../../images/Hospital.jpg') center/cover; }
+.sector-tile.healthcare { background: url('../../images/HealthCare.jpg') center/cover; }
+.sector-tile.offices { background: url('../../images/Office.jpg') center/cover; }
+.sector-tile.retail { background: url('../../images/Retail.jfif') center/cover; }
+.sector-tile.telecoms { background: url('../../images/Teelecom.jfif') center/cover; }
+.sector-tile.entertainment { background: url('../../images/Entertainment.jfif') center/cover; }
+.sector-tile.education { background: url('../../images/Library.jfif') center/cover; }
+.sector-tile.residential { background: url('../../images/Residential.jfif') center/cover; }
+.sector-tile.airports { background: url('../../images/Airport.jfif') center/cover; }
+.sector-tile.malls { background: url('../../images/Malls.jfif') center/cover; }
+.sector-tile.datacenters { background: url('../../images/HVAC3.jpg') center/cover; }
+.sector-tile.manufacturing { background: url('../../images/HVAC4.jpg') center/cover; }
+
+/* Speciality */
+.speciality-section {
+  padding: 3.5rem 0;
+  background: #fff;
+}
+.speciality-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(320px, 1.1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+.speciality-media img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(15,23,42,0.15);
+}
+.speciality-content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.4rem;
+  color: #2b2f33;
+}
+.speciality-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 1.4rem;
+}
+.speciality-item {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+.spec-icon {
+  font-size: 1.6rem;
+  color: #7a8b9a;
+}
+.speciality-item h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+.speciality-item p {
+  margin: 0;
+  color: #5b6472;
+  line-height: 1.6;
+}
 /* --- Product Slider Custom Styles (Restored) --- */
 .products-row {
   display: flex;
@@ -852,6 +967,19 @@ body {
   .core-value-card {
     max-width: 320px;
     width: 100%;
+  }
+  .sectors-grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+  .sector-tile {
+    min-height: 160px;
+    font-size: 1.1rem;
+  }
+  .speciality-inner {
+    grid-template-columns: 1fr;
+  }
+  .speciality-grid {
+    grid-template-columns: 1fr;
   }
 }
 /* ===== DESKTOP: INCREASE 3D CAROUSEL IMAGE HEIGHT ===== */
